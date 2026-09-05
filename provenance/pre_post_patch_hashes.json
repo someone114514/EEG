@@ -1,0 +1,149 @@
+{
+  "files": [
+    {
+      "bundle_path": "external/NeuroTTT_CBraMod/chbmit_groupkfold/data.py",
+      "changed": "true",
+      "post_patch_sha256": "f528fe75922a194178ee10bc7b8e8b6266eb76270a82907acd17dafe8f1f74ca",
+      "pre_patch_sha256": "519ed58cf888a5b54163b97da0111a9c5f1ac3b04bcbd692bdd534dc841c5bf1"
+    },
+    {
+      "bundle_path": "external/NeuroTTT_CBraMod/chbmit_groupkfold/evaluate.py",
+      "changed": "true",
+      "post_patch_sha256": "f73003c660b5fa8a9a86b8631234fa905eec0c14cf79fa187545b08428c07327",
+      "pre_patch_sha256": "04734c2481bd264302fe65d5d6b84b153916eab4aa3598e84fd92adf8ce3a7bd"
+    },
+    {
+      "bundle_path": "external/NeuroTTT_CBraMod/chbmit_groupkfold/meta_evaluate.py",
+      "changed": "true",
+      "post_patch_sha256": "5aa466a7bf5593157c857cfd7f6c3b4a48fde22f50310c55e4f7f7ea4af1a6a2",
+      "pre_patch_sha256": "ec4626c4024f304477bd29bf8e5ce97c7b150d032bc546359f2c295636a299bc"
+    },
+    {
+      "bundle_path": "external/NeuroTTT_CBraMod/chbmit_groupkfold/meta_model.py",
+      "changed": "false",
+      "post_patch_sha256": "46399693e921aa32b2929bd03e3b98ffcddecb87b800ef82098c6f2cc53b4d76",
+      "pre_patch_sha256": "46399693e921aa32b2929bd03e3b98ffcddecb87b800ef82098c6f2cc53b4d76"
+    },
+    {
+      "bundle_path": "external/NeuroTTT_CBraMod/chbmit_groupkfold/meta_summarize.py",
+      "changed": "true",
+      "post_patch_sha256": "5e33d72086fc7836f0e5abb28adae0339d30151ecd4698c1e6cc1839e835fa2e",
+      "pre_patch_sha256": "a9477a6f30acb8f49d279800d01bf6a2d4d661bb4ab6f414ac98706785bd623e"
+    },
+    {
+      "bundle_path": "external/NeuroTTT_CBraMod/chbmit_groupkfold/meta_train.py",
+      "changed": "true",
+      "post_patch_sha256": "10b733172d84c6aa5e82b622a6e539f653a219b560d7d1cd184cf454667e862f",
+      "pre_patch_sha256": "285f61b3f3fbe7931a11e55c13be6acfb1557ae719b5ea0fd22b70fa757d1729"
+    },
+    {
+      "bundle_path": "external/NeuroTTT_CBraMod/chbmit_groupkfold/preflight.py",
+      "changed": "true",
+      "post_patch_sha256": "4f2ed356b7ad3faa3eb0a1b97402a03f67cf18f78e2717b662615451c6f3e282",
+      "pre_patch_sha256": "8a556bf686e6b1904d8884bca5b557c7f4ecf359a0c1a9399515d3494d332edc"
+    },
+    {
+      "bundle_path": "external/NeuroTTT_CBraMod/chbmit_groupkfold/summarize.py",
+      "changed": "true",
+      "post_patch_sha256": "5b16e41917cdde8d7cde831890ca77e53d512a4cf7a56b19c9cf53ac3a9d3848",
+      "pre_patch_sha256": "a0117347f6f2792189c91751c21400cf92689c941b1f2456d1beea41ce928f0d"
+    },
+    {
+      "bundle_path": "external/NeuroTTT_CBraMod/chbmit_groupkfold/train.py",
+      "changed": "true",
+      "post_patch_sha256": "6c8e6595b9b1a6eb77ef2ee71c4563858cac2b8bc70eb7e8ec724cbc8065dda2",
+      "pre_patch_sha256": "fe3eb9de08dde2baf030dee73c1e4a27a22154d7db664dae1b053a4b5020fd6d"
+    },
+    {
+      "bundle_path": "external/NeuroTTT_CBraMod/chbmit_groupkfold_meta_eval_queue.py",
+      "changed": "true",
+      "post_patch_sha256": "17a441de4f54de770767bde4e91da36d036fdca62a8f6fde9e7653fd465e94ef",
+      "pre_patch_sha256": "8ef8432ac8626c0e09693c128c6e3b8efe91b872f8cb6cbdee800371a3ff5fb9"
+    },
+    {
+      "bundle_path": "external/NeuroTTT_CBraMod/chbmit_groupkfold_meta_preflight.py",
+      "changed": "true",
+      "post_patch_sha256": "42ac5483fcf8c643af741685939345dcc69ea09cf74b7d75d6b58d22cada5f9b",
+      "pre_patch_sha256": "2ca0dd7cf2edaf64ba639d6bdba7d409382ffd203236c1188c1cc2a607ebee61"
+    },
+    {
+      "bundle_path": "external/NeuroTTT_CBraMod/chbmit_groupkfold_meta_queue.py",
+      "changed": "true",
+      "post_patch_sha256": "c992dd811c5203b44403b319e8a9790a59c895c2861d0c822ccbcc843cb30ac6",
+      "pre_patch_sha256": "2b786c0af70f70ca9d719dcf3ff43d9dc472264241e4ad92976fdc8cac2ac7ca"
+    },
+    {
+      "bundle_path": "external/NeuroTTT_CBraMod/chbmit_groupkfold_meta_smoke.py",
+      "changed": "true",
+      "post_patch_sha256": "9cbfe8d0fe5105d616549438ee3270bed05c02800d5b05c5cf7e5fd2be93012a",
+      "pre_patch_sha256": "6127e933e578d595e6b4178112558c293380dcb52e0ad26854bada20ba6b7abc"
+    },
+    {
+      "bundle_path": "project/scripts/110_preflight_no_duplicate_overlap.py",
+      "changed": "false",
+      "post_patch_sha256": "dc0168f61e34b06a0f825019672dad663dd264dd4001567c931c64c3607db091",
+      "pre_patch_sha256": "dc0168f61e34b06a0f825019672dad663dd264dd4001567c931c64c3607db091"
+    },
+    {
+      "bundle_path": "project/scripts/202_cbramod_same_patient_adaptation.py",
+      "changed": "true",
+      "post_patch_sha256": "89d5683213ccc37c2dbdf619cd9425d1c9354daa109871e3be6290d824ba606e",
+      "pre_patch_sha256": "9a041e06217b51db99b15453b358b2103e1818873e58f8dfeb236b44e060e773"
+    },
+    {
+      "bundle_path": "project/scripts/210_joint_ttt_train.py",
+      "changed": "true",
+      "post_patch_sha256": "29e2efe45fcf112e40d92737987696f6c45fe1819980f99f5152d16d91601e2b",
+      "pre_patch_sha256": "39ba17e57fac69b3d3ff8b61be512636af3a70d12726773745013b645851384e"
+    },
+    {
+      "bundle_path": "project/scripts/212_meta_ttt_train.py",
+      "changed": "true",
+      "post_patch_sha256": "3d3cdd3c2c91ac85ed8acded2fb4cb528d4609e0311c7e509f5c6a011dea1b4b",
+      "pre_patch_sha256": "889e00dc6f44dac5e6a4c6e14e0af966afafab377b8eb171fcb414eb6ac475ab"
+    },
+    {
+      "bundle_path": "project/scripts/214_evaluate_joint_ttt.py",
+      "changed": "true",
+      "post_patch_sha256": "3a5bbd48f03d4fc25c09f1f0a00a52a86a37cc086e13412b1a16a2590693061c",
+      "pre_patch_sha256": "a7244939237e65dec7908d4bc870d1732ed5212e603be8797ad0ef5106984ae2"
+    },
+    {
+      "bundle_path": "project/scripts/264_freeze_band_ttt_v2.py",
+      "changed": "true",
+      "post_patch_sha256": "fc9c5d2722f09b83facdf22d06ff19dd5d791fce2a08c173915fc40b0e73cc94",
+      "pre_patch_sha256": "ca2581cac866a6bed53d11e2e0a24f6e6f25017661dbfd6b31aa84eaf9d804a8"
+    },
+    {
+      "bundle_path": "project/scripts/265_evaluate_band_ttt_v2.py",
+      "changed": "true",
+      "post_patch_sha256": "762718dc83b8ced2fa13e96aa2962a624c97a751a68718a6b64a450640e22c0c",
+      "pre_patch_sha256": "56d77134346b0e16a1bf6e3997103278a36bfd1429861e76807a86fbd429435b"
+    },
+    {
+      "bundle_path": "project/scripts/266_summarize_band_ttt_v2.py",
+      "changed": "true",
+      "post_patch_sha256": "9a693dfab0f6e2d5a670eda413a30c21f526261b208b40ffffd36dba440469d7",
+      "pre_patch_sha256": "97be4a501c9eb5d30d27d8ffc4d407d08d554bab3c540df2609e09ecb02dd63c"
+    },
+    {
+      "bundle_path": "project/scripts/267_queue_band_ttt_v2.py",
+      "changed": "true",
+      "post_patch_sha256": "2ec3df480c1d684bda177415db94576262c49eb11d6d1ed104b5b6a43272702a",
+      "pre_patch_sha256": "70686a327be90028c9a1624c5dde2a2b4d510cc43a1d00b5bf148b9f32467d08"
+    },
+    {
+      "bundle_path": "project/scripts/268_import_existing_band_ttt_v2.py",
+      "changed": "true",
+      "post_patch_sha256": "f9ff22448af5c1d76cf5b6b3298502c9d08eba8c445278702eee75fc98788ce1",
+      "pre_patch_sha256": "2fcdcae934120cbdd9a3a229418e67f76bde425cfc4306448a1a1f7ee06e5768"
+    },
+    {
+      "bundle_path": "project/scripts/270_queue_band_ttt_v2_paired.py",
+      "changed": "true",
+      "post_patch_sha256": "5d8ae10c40c99713aee4a1d83b0e0ca6ce55857b1e25d9fecb8e5cb3c8ed9515",
+      "pre_patch_sha256": "b8f1918c86fd94d6cf7762615519443bb6a651d874559c940d34b1b8d47c338d"
+    }
+  ],
+  "path_patch_version": 1
+}

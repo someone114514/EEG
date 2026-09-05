@@ -1,0 +1,342 @@
+--- a/external/NeuroTTT_CBraMod/chbmit_groupkfold/data.py
++++ b/external/NeuroTTT_CBraMod/chbmit_groupkfold/data.py
+@@ -1,4 +1,5 @@
+ from __future__ import annotations
++import os
+ 
+ import json
+ from collections import OrderedDict
+@@ -15,10 +16,10 @@
+ WINDOW_SAMPLES = RATE * WINDOW_SECONDS
+ CHANNELS = 16
+ 
+-DEFAULT_ROOT = Path("/root/b_false_alarm_atlas")
++DEFAULT_ROOT = Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas"))
+ DEFAULT_WINDOWS = DEFAULT_ROOT / "manifests/windows.parquet"
+ DEFAULT_FOLDS = DEFAULT_ROOT / "manifests/groupkfold_cv_v1"
+-DEFAULT_CACHE = Path("/mnt/d/EEGData/bfa_cache_v3_official_noclip/cbramod")
++DEFAULT_CACHE = Path(os.environ.get("BFA_CACHE_ROOT", "/mnt/d/EEGData/bfa_cache_v3_official_noclip/cbramod"))
+ 
+ 
+ def fold_manifest(fold: int, fold_root: Path = DEFAULT_FOLDS) -> dict:
+--- a/external/NeuroTTT_CBraMod/chbmit_groupkfold/evaluate.py
++++ b/external/NeuroTTT_CBraMod/chbmit_groupkfold/evaluate.py
+@@ -22,7 +22,7 @@
+ from .model import CHBJointModel
+ from .transforms import deterministic_band_view, deterministic_patch_mask
+ 
+-BFA_ROOT = Path("/root/b_false_alarm_atlas")
++BFA_ROOT = Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas"))
+ if str(BFA_ROOT / "src") not in sys.path:
+     sys.path.insert(0, str(BFA_ROOT / "src"))
+ from bfa.evaluation.eventize import eventize  # noqa: E402
+@@ -435,7 +435,7 @@
+     parser.add_argument("--fold", type=int, choices=range(5), required=True)
+     parser.add_argument("--split", choices=("validation", "test"), required=True)
+     parser.add_argument("--seed", type=int, default=3407)
+-    parser.add_argument("--output-root", type=Path, default=Path("/root/b_false_alarm_atlas/outputs/reports/neurottt-chbmit-5fold-v1"))
++    parser.add_argument("--output-root", type=Path, default=Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas")) / 'outputs/reports/neurottt-chbmit-5fold-v1')
+     parser.add_argument("--windows", type=Path, default=DEFAULT_WINDOWS)
+     parser.add_argument("--fold-root", type=Path, default=DEFAULT_FOLDS)
+     parser.add_argument("--cache-root", type=Path, default=DEFAULT_CACHE)
+--- a/external/NeuroTTT_CBraMod/chbmit_groupkfold/meta_evaluate.py
++++ b/external/NeuroTTT_CBraMod/chbmit_groupkfold/meta_evaluate.py
+@@ -29,7 +29,7 @@
+     "meta_temporal_frozen": ("meta_temporal", None),
+     "meta_temporal_ttt": ("meta_temporal", "temporal"),
+ }
+-BFA_ROOT = Path("/root/b_false_alarm_atlas")
++BFA_ROOT = Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas"))
+ SEIZURE_SCORING_REVISION = "event_collar_30s_60s_raw_alarm_time_v1"
+ 
+ 
+@@ -258,7 +258,7 @@
+     parser.add_argument("--fold", type=int, choices=range(5), required=True)
+     parser.add_argument("--split", choices=("validation", "test"), required=True)
+     parser.add_argument("--seed", type=int, default=3407)
+-    parser.add_argument("--output-root", type=Path, default=Path("/root/b_false_alarm_atlas/outputs/reports/meta-ttt-chbmit-5fold-v1"))
++    parser.add_argument("--output-root", type=Path, default=Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas")) / 'outputs/reports/meta-ttt-chbmit-5fold-v1')
+     parser.add_argument("--windows", type=Path, default=DEFAULT_WINDOWS)
+     parser.add_argument("--fold-root", type=Path, default=DEFAULT_FOLDS)
+     parser.add_argument("--cache-root", type=Path, default=DEFAULT_CACHE)
+--- a/external/NeuroTTT_CBraMod/chbmit_groupkfold/meta_summarize.py
++++ b/external/NeuroTTT_CBraMod/chbmit_groupkfold/meta_summarize.py
+@@ -202,9 +202,9 @@
+ 
+ def main() -> None:
+     parser = argparse.ArgumentParser()
+-    parser.add_argument("--output-root", type=Path, default=Path("/root/b_false_alarm_atlas/outputs/reports/meta-ttt-chbmit-5fold-v1"))
+-    parser.add_argument("--recordings", type=Path, default=Path("/root/b_false_alarm_atlas/manifests/recordings.parquet"))
+-    parser.add_argument("--seizures", type=Path, default=Path("/root/b_false_alarm_atlas/manifests/seizures.parquet"))
++    parser.add_argument("--output-root", type=Path, default=Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas")) / 'outputs/reports/meta-ttt-chbmit-5fold-v1')
++    parser.add_argument("--recordings", type=Path, default=Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas")) / 'manifests/recordings.parquet')
++    parser.add_argument("--seizures", type=Path, default=Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas")) / 'manifests/seizures.parquet')
+     parser.add_argument("--bootstrap-replicates", type=int, default=2000); parser.add_argument("--seed", type=int, default=3407)
+     args = parser.parse_args(); print(json.dumps(run(args.output_root, args.recordings, args.seizures, args.bootstrap_replicates, args.seed), indent=2, allow_nan=True), flush=True)
+ 
+--- a/external/NeuroTTT_CBraMod/chbmit_groupkfold/meta_train.py
++++ b/external/NeuroTTT_CBraMod/chbmit_groupkfold/meta_train.py
+@@ -302,7 +302,7 @@
+     parser.add_argument("--condition", choices=tuple(OBJECTIVES), required=True)
+     parser.add_argument("--fold", type=int, choices=range(5), required=True)
+     parser.add_argument("--seed", type=int, default=3407)
+-    parser.add_argument("--output-root", type=Path, default=Path("/root/b_false_alarm_atlas/outputs/reports/meta-ttt-chbmit-5fold-v1"))
++    parser.add_argument("--output-root", type=Path, default=Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas")) / 'outputs/reports/meta-ttt-chbmit-5fold-v1')
+     parser.add_argument("--windows", type=Path, default=DEFAULT_WINDOWS)
+     parser.add_argument("--fold-root", type=Path, default=DEFAULT_FOLDS)
+     parser.add_argument("--cache-root", type=Path, default=DEFAULT_CACHE)
+--- a/external/NeuroTTT_CBraMod/chbmit_groupkfold/preflight.py
++++ b/external/NeuroTTT_CBraMod/chbmit_groupkfold/preflight.py
+@@ -46,13 +46,13 @@
+ 
+ def main() -> None:
+     parser = argparse.ArgumentParser()
+-    parser.add_argument("--output-root", type=Path, default=Path("/root/b_false_alarm_atlas/outputs/reports/neurottt-chbmit-5fold-v1"))
++    parser.add_argument("--output-root", type=Path, default=Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas")) / 'outputs/reports/neurottt-chbmit-5fold-v1')
+     parser.add_argument("--repo-root", type=Path, default=Path(__file__).resolve().parents[2])
+     parser.add_argument("--fold-root", type=Path, default=DEFAULT_FOLDS)
+     parser.add_argument("--windows", type=Path, default=DEFAULT_WINDOWS)
+     parser.add_argument("--cache-root", type=Path, default=DEFAULT_CACHE)
+-    parser.add_argument("--smoke-root", type=Path, default=Path("/root/b_false_alarm_atlas/outputs/reports/neurottt-chbmit-5fold-v1-smoke-v1"))
+-    parser.add_argument("--mask-smoke-root", type=Path, default=Path("/root/b_false_alarm_atlas/outputs/reports/neurottt-chbmit-5fold-v1-smoke-v4"))
++    parser.add_argument("--smoke-root", type=Path, default=Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas")) / 'outputs/reports/neurottt-chbmit-5fold-v1-smoke-v1')
++    parser.add_argument("--mask-smoke-root", type=Path, default=Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas")) / 'outputs/reports/neurottt-chbmit-5fold-v1-smoke-v4')
+     args = parser.parse_args()
+     if (args.output_root / "runs").exists() and any((args.output_root / "runs").iterdir()):
+         raise FileExistsError(f"formal run directory is not empty: {args.output_root / 'runs'}")
+--- a/external/NeuroTTT_CBraMod/chbmit_groupkfold/summarize.py
++++ b/external/NeuroTTT_CBraMod/chbmit_groupkfold/summarize.py
+@@ -266,9 +266,9 @@
+ 
+ def parse_args() -> argparse.Namespace:
+     parser = argparse.ArgumentParser()
+-    parser.add_argument("--output-root", type=Path, default=Path("/root/b_false_alarm_atlas/outputs/reports/neurottt-chbmit-5fold-v1"))
+-    parser.add_argument("--recordings", type=Path, default=Path("/root/b_false_alarm_atlas/manifests/recordings.parquet"))
+-    parser.add_argument("--seizures", type=Path, default=Path("/root/b_false_alarm_atlas/manifests/seizures.parquet"))
++    parser.add_argument("--output-root", type=Path, default=Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas")) / 'outputs/reports/neurottt-chbmit-5fold-v1')
++    parser.add_argument("--recordings", type=Path, default=Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas")) / 'manifests/recordings.parquet')
++    parser.add_argument("--seizures", type=Path, default=Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas")) / 'manifests/seizures.parquet')
+     parser.add_argument("--bootstrap-replicates", type=int, default=2000)
+     parser.add_argument("--seed", type=int, default=3407)
+     return parser.parse_args()
+--- a/external/NeuroTTT_CBraMod/chbmit_groupkfold/train.py
++++ b/external/NeuroTTT_CBraMod/chbmit_groupkfold/train.py
+@@ -197,7 +197,7 @@
+     parser.add_argument("--condition", choices=("detection_only", "band_joint", "mask_joint"), required=True)
+     parser.add_argument("--fold", type=int, choices=range(5), required=True)
+     parser.add_argument("--seed", type=int, default=3407)
+-    parser.add_argument("--output-root", type=Path, default=Path("/root/b_false_alarm_atlas/outputs/reports/neurottt-chbmit-5fold-v1"))
++    parser.add_argument("--output-root", type=Path, default=Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas")) / 'outputs/reports/neurottt-chbmit-5fold-v1')
+     parser.add_argument("--windows", type=Path, default=DEFAULT_WINDOWS)
+     parser.add_argument("--fold-root", type=Path, default=DEFAULT_FOLDS)
+     parser.add_argument("--cache-root", type=Path, default=DEFAULT_CACHE)
+--- a/external/NeuroTTT_CBraMod/chbmit_groupkfold_meta_eval_queue.py
++++ b/external/NeuroTTT_CBraMod/chbmit_groupkfold_meta_eval_queue.py
+@@ -10,7 +10,7 @@
+ 
+ 
+ CODE = Path(__file__).resolve().parent
+-PYTHON = Path("/root/b_false_alarm_atlas/.venv/bin/python")
++PYTHON = Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas")) / '.venv/bin/python'
+ CONDITIONS = ("supervised_frozen", "meta_band_frozen", "meta_band_ttt", "meta_temporal_frozen", "meta_temporal_ttt")
+ TTT_BATCH_SIZE = 64
+ 
+@@ -94,7 +94,7 @@
+ 
+ 
+ def main() -> None:
+-    parser = argparse.ArgumentParser(); parser.add_argument("--output-root", type=Path, default=Path("/root/b_false_alarm_atlas/outputs/reports/meta-ttt-chbmit-5fold-v1")); args = parser.parse_args(); root = args.output_root
++    parser = argparse.ArgumentParser(); parser.add_argument("--output-root", type=Path, default=Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas")) / 'outputs/reports/meta-ttt-chbmit-5fold-v1'); args = parser.parse_args(); root = args.output_root
+     while not source_ready(root):
+         atomic_json(root / "evaluation_queue_status.json", {"status": "waiting_for_source", "phase": "source_training", "updated_at": utc_now()}); time.sleep(60)
+     frozen = [c for c in CONDITIONS if "ttt" not in c]; adaptive = [c for c in CONDITIONS if "ttt" in c]
+--- a/external/NeuroTTT_CBraMod/chbmit_groupkfold_meta_preflight.py
++++ b/external/NeuroTTT_CBraMod/chbmit_groupkfold_meta_preflight.py
+@@ -147,7 +147,7 @@
+ 
+ def main() -> None:
+     parser = argparse.ArgumentParser()
+-    parser.add_argument("--output-root", type=Path, default=Path("/root/b_false_alarm_atlas/outputs/reports/meta-ttt-chbmit-5fold-v1"))
++    parser.add_argument("--output-root", type=Path, default=Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas")) / 'outputs/reports/meta-ttt-chbmit-5fold-v1')
+     parser.add_argument("--windows", type=Path, default=DEFAULT_WINDOWS)
+     parser.add_argument("--fold-root", type=Path, default=DEFAULT_FOLDS)
+     parser.add_argument("--cache-root", type=Path, default=DEFAULT_CACHE)
+--- a/external/NeuroTTT_CBraMod/chbmit_groupkfold_meta_queue.py
++++ b/external/NeuroTTT_CBraMod/chbmit_groupkfold_meta_queue.py
+@@ -10,7 +10,7 @@
+ 
+ 
+ CODE = Path(__file__).resolve().parent
+-PYTHON = Path("/root/b_false_alarm_atlas/.venv/bin/python")
++PYTHON = Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas")) / '.venv/bin/python'
+ CONDITIONS = ("detection_only", "meta_band", "meta_temporal")
+ 
+ 
+@@ -27,7 +27,7 @@
+ 
+ def main() -> None:
+     parser = argparse.ArgumentParser()
+-    parser.add_argument("--output-root", type=Path, default=Path("/root/b_false_alarm_atlas/outputs/reports/meta-ttt-chbmit-5fold-v1"))
++    parser.add_argument("--output-root", type=Path, default=Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas")) / 'outputs/reports/meta-ttt-chbmit-5fold-v1')
+     parser.add_argument("--max-parallel", type=int, default=3)
+     parser.add_argument("--batch-size", type=int, default=32)
+     parser.add_argument("--effective-batch", type=int, default=128)
+--- a/external/NeuroTTT_CBraMod/chbmit_groupkfold_meta_smoke.py
++++ b/external/NeuroTTT_CBraMod/chbmit_groupkfold_meta_smoke.py
+@@ -76,7 +76,7 @@
+ 
+ 
+ def main() -> None:
+-    parser = argparse.ArgumentParser(); parser.add_argument("--output-root", type=Path, default=Path("/root/b_false_alarm_atlas/outputs/reports/meta-ttt-chbmit-5fold-v1")); parser.add_argument("--windows", type=Path, default=DEFAULT_WINDOWS); parser.add_argument("--fold-root", type=Path, default=DEFAULT_FOLDS); parser.add_argument("--cache-root", type=Path, default=DEFAULT_CACHE); parser.add_argument("--pretrained", type=Path, default=Path(__file__).resolve().parent / "pretrained_weights/pretrained_weights.pth"); parser.add_argument("--device", default="cuda"); parser.add_argument("--batch-size", type=int, default=4); parser.add_argument("--workers", type=int, default=2); parser.add_argument("--updates", type=int, default=25); args = parser.parse_args()
++    parser = argparse.ArgumentParser(); parser.add_argument("--output-root", type=Path, default=Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas")) / 'outputs/reports/meta-ttt-chbmit-5fold-v1'); parser.add_argument("--windows", type=Path, default=DEFAULT_WINDOWS); parser.add_argument("--fold-root", type=Path, default=DEFAULT_FOLDS); parser.add_argument("--cache-root", type=Path, default=DEFAULT_CACHE); parser.add_argument("--pretrained", type=Path, default=Path(__file__).resolve().parent / "pretrained_weights/pretrained_weights.pth"); parser.add_argument("--device", default="cuda"); parser.add_argument("--batch-size", type=int, default=4); parser.add_argument("--workers", type=int, default=2); parser.add_argument("--updates", type=int, default=25); args = parser.parse_args()
+     if args.device == "cuda" and not torch.cuda.is_available(): raise RuntimeError("CUDA unavailable")
+     results = {objective: run_one(args, objective) for objective in ("band", "temporal")}
+     payload = {"release_id": "meta-ttt-chbmit-5fold-v1", "status": "passed" if all(value["status"] == "passed" for value in results.values()) else "failed", "results": results, "created_at": datetime.now(timezone.utc).isoformat()}
+--- a/project/scripts/202_cbramod_same_patient_adaptation.py
++++ b/project/scripts/202_cbramod_same_patient_adaptation.py
+@@ -43,7 +43,7 @@
+ from bfa.models.shared_head import SharedContextHead
+ 
+ 
+-ROOT = Path("/root/b_false_alarm_atlas")
++ROOT = Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas"))
+ OUT = ROOT / "outputs/reports" / os.environ.get(
+     "CBRAMOD_TTT_NAMESPACE", "cbramod-chb-same-patient-ttt-oracle-v1"
+ )
+@@ -54,7 +54,7 @@
+ FOLD_FILE = ROOT / "manifests/groupkfold_cv_v1/fold_0.json"
+ SOURCE_CHECKPOINT = ROOT / "runs/v3-groupkfold-confirmatory-v1/cbramod/split0_seed17_main/checkpoints/step_05000.pt"
+ PRETRAINED = ROOT / "third_party/CBraMod/pretrained_weights/pretrained_weights.pth"
+-SIGNAL_CACHE = Path("/mnt/d/EEGData/bfa_cache_v3_official_noclip/cbramod")
++SIGNAL_CACHE = Path(os.environ.get("BFA_CACHE_ROOT", "/mnt/d/EEGData/bfa_cache_v3_official_noclip/cbramod"))
+ THRESHOLD = 0.01
+ MODEL_RATE = 200
+ WINDOW_S = 10
+--- a/project/scripts/210_joint_ttt_train.py
++++ b/project/scripts/210_joint_ttt_train.py
+@@ -31,7 +31,7 @@
+ from bfa.models.cbramod_adapter import CBraModAdapter
+ from bfa.models.shared_head import SharedContextHead
+ 
+-ROOT = Path("/root/b_false_alarm_atlas")
++ROOT = Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas"))
+ OUT = ROOT / "outputs/reports" / os.environ.get("JOINT_TTT_NAMESPACE", "cbramod-joint-ttt-v1")
+ WINDOWS = ROOT / "manifests/windows.parquet"
+ CV_MANIFEST = ROOT / "manifests/groupkfold_cv_v1/cv_manifest.json"
+@@ -110,7 +110,7 @@
+     def get(self, relative_path: str) -> np.ndarray:
+         if relative_path in self._items:
+             value = self._items.pop(relative_path); self._items[relative_path] = value; return value
+-        path = Path("/mnt/d/EEGData/bfa_cache_v3_official_noclip/cbramod") / Path(relative_path).with_suffix(".npy")
++        path = Path(os.environ.get("BFA_CACHE_ROOT", "/mnt/d/EEGData/bfa_cache_v3_official_noclip/cbramod")) / Path(relative_path).with_suffix(".npy")
+         if not path.is_file(): raise FileNotFoundError(path)
+         value = np.load(path, mmap_mode="r", allow_pickle=False)
+         if value.ndim != 2 or value.shape[0] != 16: raise ValueError(f"unexpected cached EEG shape {value.shape}: {path}")
+--- a/project/scripts/212_meta_ttt_train.py
++++ b/project/scripts/212_meta_ttt_train.py
+@@ -22,7 +22,7 @@
+ import numpy as np
+ import torch
+ 
+-ROOT = Path("/root/b_false_alarm_atlas")
++ROOT = Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas"))
+ OUT = ROOT / "outputs/reports" / os.environ.get("META_TTT_NAMESPACE", "cbramod-meta-ttt-v1")
+ SEEDS = (17, 42, 3407)
+ 
+--- a/project/scripts/214_evaluate_joint_ttt.py
++++ b/project/scripts/214_evaluate_joint_ttt.py
+@@ -19,7 +19,7 @@
+ import pandas as pd
+ import torch
+ 
+-ROOT = Path("/root/b_false_alarm_atlas")
++ROOT = Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas"))
+ JOINT_NAMESPACE = os.environ.get("JOINT_TTT_NAMESPACE", "cbramod-joint-ttt-v1-formal")
+ OUT = ROOT / "outputs/reports" / JOINT_NAMESPACE / "evaluation"
+ SEEDS = (17, 42, 3407)
+--- a/project/scripts/264_freeze_band_ttt_v2.py
++++ b/project/scripts/264_freeze_band_ttt_v2.py
+@@ -1,5 +1,6 @@
+ """Freeze the prespecified Band-TTT v2 matrix and official CHB-MIT record order."""
+ from __future__ import annotations
++import os
+ 
+ import hashlib
+ import json
+@@ -9,10 +10,10 @@
+ 
+ import pandas as pd
+ 
+-ROOT = Path("/root/b_false_alarm_atlas")
++ROOT = Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas"))
+ RELEASE = "band-ttt-v2-fold01"
+ OUT = ROOT / "outputs" / "reports" / RELEASE
+-SUMMARY_ROOT = Path("/mnt/d/EEGData/chbmit-1.0.0")
++SUMMARY_ROOT = Path(os.environ.get("BFA_RAW_ROOT", "/mnt/d/EEGData/chbmit-1.0.0"))
+ SOURCE_RELEASE = ROOT / "outputs" / "reports" / "meta-ttt-chbmit-5fold-v1"
+ 
+ 
+--- a/project/scripts/265_evaluate_band_ttt_v2.py
++++ b/project/scripts/265_evaluate_band_ttt_v2.py
+@@ -18,8 +18,8 @@
+ from torch.nn import functional as F
+ from torch.utils.data import DataLoader
+ 
+-ROOT = Path("/root/b_false_alarm_atlas")
+-CODE_ROOT = Path("/mnt/c/Users/User/Documents/Codex/2026-08-03/du-q/work/NeuroTTT/CBraMod")
++ROOT = Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas"))
++CODE_ROOT = Path(os.environ.get("NEUROTTT_CODE_ROOT", "/mnt/c/Users/User/Documents/Codex/2026-08-03/du-q/work/NeuroTTT/CBraMod"))
+ sys.path.insert(0, str(CODE_ROOT))
+ sys.path.insert(0, str(ROOT / "src"))
+ 
+--- a/project/scripts/266_summarize_band_ttt_v2.py
++++ b/project/scripts/266_summarize_band_ttt_v2.py
+@@ -1,5 +1,6 @@
+ """Summarize completed Band-TTT v2 fold-0/1 jobs against frozen baselines."""
+ from __future__ import annotations
++import os
+ 
+ import json
+ from pathlib import Path
+@@ -7,7 +8,7 @@
+ 
+ import pandas as pd
+ 
+-ROOT = Path("/root/b_false_alarm_atlas")
++ROOT = Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas"))
+ OUT = ROOT / "outputs" / "reports" / "band-ttt-v2-fold01"
+ SOURCE = ROOT / "outputs" / "reports" / "meta-ttt-chbmit-5fold-v1"
+ 
+--- a/project/scripts/267_queue_band_ttt_v2.py
++++ b/project/scripts/267_queue_band_ttt_v2.py
+@@ -15,7 +15,7 @@
+ from pathlib import Path
+ from typing import Any
+ 
+-ROOT = Path("/root/b_false_alarm_atlas")
++ROOT = Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas"))
+ OUT = ROOT / "outputs" / "reports" / "band-ttt-v2-fold01"
+ PYTHON = ROOT / ".venv" / "bin" / "python"
+ EVALUATOR = ROOT / "scripts" / "265_evaluate_band_ttt_v2.py"
+--- a/project/scripts/268_import_existing_band_ttt_v2.py
++++ b/project/scripts/268_import_existing_band_ttt_v2.py
+@@ -8,7 +8,7 @@
+ from datetime import datetime, timezone
+ from pathlib import Path
+ 
+-ROOT = Path("/root/b_false_alarm_atlas")
++ROOT = Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas"))
+ OUT = ROOT / "outputs" / "reports" / "band-ttt-v2-fold01"
+ V1 = ROOT / "outputs" / "reports" / "meta-ttt-chbmit-5fold-v1"
+ EARLY_V2 = ROOT / "outputs" / "reports" / "band-ttt-v2" / "independent"
+--- a/project/scripts/270_queue_band_ttt_v2_paired.py
++++ b/project/scripts/270_queue_band_ttt_v2_paired.py
+@@ -18,7 +18,7 @@
+ from typing import Any
+ 
+ 
+-ROOT = Path("/root/b_false_alarm_atlas")
++ROOT = Path(os.environ.get("BFA_ROOT", "/root/b_false_alarm_atlas"))
+ OUT = ROOT / "outputs" / "reports" / "band-ttt-v2-fold01"
+ PYTHON = ROOT / ".venv" / "bin" / "python"
+ EVALUATOR = ROOT / "scripts" / "265_evaluate_band_ttt_v2.py"

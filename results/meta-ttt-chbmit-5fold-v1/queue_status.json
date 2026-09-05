@@ -1,0 +1,110 @@
+{
+  "completed": [
+    {
+      "condition": "detection_only",
+      "finished_at": "2026-09-02T07:28:20.216260+00:00",
+      "fold": 0,
+      "resumed": true,
+      "return_code": 0
+    },
+    {
+      "condition": "meta_band",
+      "finished_at": "2026-09-02T16:16:10.807472+00:00",
+      "fold": 0,
+      "resumed": true,
+      "return_code": 0
+    },
+    {
+      "condition": "meta_temporal",
+      "finished_at": "2026-09-02T11:23:24.476380+00:00",
+      "fold": 0,
+      "resumed": true,
+      "return_code": 0
+    },
+    {
+      "condition": "detection_only",
+      "finished_at": "2026-09-02T11:55:55.827413+00:00",
+      "fold": 1,
+      "resumed": true,
+      "return_code": 0
+    },
+    {
+      "condition": "meta_band",
+      "finished_at": "2026-09-02T18:10:05.918278+00:00",
+      "fold": 1,
+      "resumed": true,
+      "return_code": 0
+    },
+    {
+      "condition": "meta_temporal",
+      "finished_at": "2026-09-02T21:11:23.216690+00:00",
+      "fold": 1,
+      "resumed": true,
+      "return_code": 0
+    },
+    {
+      "condition": "detection_only",
+      "finished_at": "2026-09-02T19:12:38.784156+00:00",
+      "fold": 2,
+      "resumed": true,
+      "return_code": 0
+    },
+    {
+      "condition": "meta_band",
+      "finished_at": "2026-09-02T21:38:20.787690+00:00",
+      "fold": 2,
+      "resumed": true,
+      "return_code": 0
+    },
+    {
+      "condition": "detection_only",
+      "finished_at": "2026-09-02T22:01:37.293745+00:00",
+      "fold": 3,
+      "resumed": true,
+      "return_code": 0
+    },
+    {
+      "condition": "meta_band",
+      "finished_at": "2026-09-03T02:36:27.263507+00:00",
+      "fold": 3,
+      "resumed": true,
+      "return_code": 0
+    },
+    {
+      "condition": "meta_temporal",
+      "finished_at": "2026-09-04T11:19:14.329879+00:00",
+      "fold": 3,
+      "return_code": 0
+    },
+    {
+      "condition": "detection_only",
+      "finished_at": "2026-09-04T11:33:13.584674+00:00",
+      "fold": 4,
+      "return_code": 0
+    },
+    {
+      "condition": "meta_temporal",
+      "finished_at": "2026-09-04T13:01:44.207522+00:00",
+      "fold": 2,
+      "return_code": 0
+    },
+    {
+      "condition": "meta_band",
+      "finished_at": "2026-09-04T13:46:42.691956+00:00",
+      "fold": 4,
+      "return_code": 0
+    },
+    {
+      "condition": "meta_temporal",
+      "finished_at": "2026-09-04T14:23:35.851653+00:00",
+      "fold": 4,
+      "return_code": 0
+    }
+  ],
+  "failed": [],
+  "queued_remaining": 0,
+  "release_id": "meta-ttt-chbmit-5fold-v1",
+  "running": [],
+  "status": "complete",
+  "updated_at": "2026-09-04T14:23:35.851722+00:00"
+}

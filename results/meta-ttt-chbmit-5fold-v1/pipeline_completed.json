@@ -1,0 +1,8 @@
+{
+  "bootstrap_replicates": 2000,
+  "completed_at": "2026-09-04T16:45:54.124332+00:00",
+  "source_runs": 15,
+  "status": "complete",
+  "test_fold_conditions": 25,
+  "validation_fold_conditions": 25
+}

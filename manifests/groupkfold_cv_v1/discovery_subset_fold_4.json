@@ -1,0 +1,53 @@
+{
+  "fold": 4,
+  "max_windows": 50000,
+  "model_outputs_read": false,
+  "output": "manifests/groupkfold_cv_v1/discovery_subset_fold_4.parquet",
+  "patients": [
+    "chb01_21",
+    "chb02",
+    "chb04",
+    "chb06",
+    "chb07",
+    "chb09",
+    "chb10",
+    "chb11",
+    "chb12",
+    "chb14",
+    "chb17",
+    "chb19",
+    "chb20",
+    "chb22"
+  ],
+  "recordings": [
+    "chb01_19.edf",
+    "chb01_25.edf",
+    "chb02_01.edf",
+    "chb02_29.edf",
+    "chb04_14.edf",
+    "chb04_42.edf",
+    "chb06_14.edf",
+    "chb07_06.edf",
+    "chb09_12.edf",
+    "chb10_04.edf",
+    "chb11_26.edf",
+    "chb12_24.edf",
+    "chb14_27.edf",
+    "chb17b_60.edf",
+    "chb19_05.edf",
+    "chb20_05.edf",
+    "chb22_54.edf"
+  ],
+  "release_id": "v3-groupkfold-confirmatory-v1",
+  "rows": 49774,
+  "selection_algorithm": "sha256(fold:recording) order; patient round-robin; whole recordings; max 50000 windows",
+  "selection_inputs": [
+    "frozen outer-train patient IDs",
+    "recording IDs",
+    "window row counts"
+  ],
+  "source_fold_sha256": "13c73e48ddedf9ff44b680c7d7224eed4b200c839e164a4aba398d03a36a991c",
+  "subset_id": "outer-train-discovery-subset-v1",
+  "subset_sha256": "48fe5cf35a5c3046b96fd1ff0aebae8b14793888d2efd097fc6993d76fd3f8c0",
+  "test_read": false
+}

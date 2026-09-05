@@ -1,0 +1,34 @@
+{
+  "errors": [],
+  "excluded_recording_count": 22,
+  "excluded_recordings": [
+    "chb24/chb24_01.edf",
+    "chb24/chb24_02.edf",
+    "chb24/chb24_03.edf",
+    "chb24/chb24_04.edf",
+    "chb24/chb24_05.edf",
+    "chb24/chb24_06.edf",
+    "chb24/chb24_07.edf",
+    "chb24/chb24_08.edf",
+    "chb24/chb24_09.edf",
+    "chb24/chb24_10.edf",
+    "chb24/chb24_11.edf",
+    "chb24/chb24_12.edf",
+    "chb24/chb24_13.edf",
+    "chb24/chb24_14.edf",
+    "chb24/chb24_15.edf",
+    "chb24/chb24_16.edf",
+    "chb24/chb24_17.edf",
+    "chb24/chb24_18.edf",
+    "chb24/chb24_19.edf",
+    "chb24/chb24_20.edf",
+    "chb24/chb24_21.edf",
+    "chb24/chb24_22.edf"
+  ],
+  "primary_excluded_cases": [
+    "chb24"
+  ],
+  "recording_count": 664,
+  "root": "/mnt/d/EEGData/chbmit-1.0.0",
+  "seizure_count": 182
+}

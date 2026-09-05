@@ -1,0 +1,191 @@
+{
+  "active_processes": [],
+  "cache_probe": {
+    "dtype": "float32",
+    "path": "/mnt/d/EEGData/bfa_cache_v3_official_noclip/cbramod/chb01/chb01_01.npy",
+    "shape": [
+      16,
+      720000
+    ],
+    "status": "passed"
+  },
+  "created_at": "2026-09-04T08:50:41.406295+00:00",
+  "folds": {
+    "0": {
+      "test": [
+        "chb02",
+        "chb07",
+        "chb12",
+        "chb17",
+        "chb23"
+      ],
+      "train": [
+        "chb01_21",
+        "chb03",
+        "chb05",
+        "chb08",
+        "chb09",
+        "chb11",
+        "chb13",
+        "chb14",
+        "chb15",
+        "chb16",
+        "chb18",
+        "chb20",
+        "chb22"
+      ],
+      "validation": [
+        "chb04",
+        "chb06",
+        "chb10",
+        "chb19"
+      ]
+    },
+    "1": {
+      "test": [
+        "chb01_21",
+        "chb06",
+        "chb11",
+        "chb16",
+        "chb22"
+      ],
+      "train": [
+        "chb02",
+        "chb03",
+        "chb04",
+        "chb05",
+        "chb07",
+        "chb08",
+        "chb09",
+        "chb10",
+        "chb13",
+        "chb14",
+        "chb19",
+        "chb20",
+        "chb23"
+      ],
+      "validation": [
+        "chb12",
+        "chb15",
+        "chb17",
+        "chb18"
+      ]
+    },
+    "2": {
+      "test": [
+        "chb05",
+        "chb10",
+        "chb15",
+        "chb20"
+      ],
+      "train": [
+        "chb02",
+        "chb03",
+        "chb04",
+        "chb06",
+        "chb07",
+        "chb11",
+        "chb12",
+        "chb13",
+        "chb14",
+        "chb16",
+        "chb17",
+        "chb19",
+        "chb22",
+        "chb23"
+      ],
+      "validation": [
+        "chb01_21",
+        "chb08",
+        "chb09",
+        "chb18"
+      ]
+    },
+    "3": {
+      "test": [
+        "chb04",
+        "chb09",
+        "chb14",
+        "chb19"
+      ],
+      "train": [
+        "chb02",
+        "chb03",
+        "chb05",
+        "chb07",
+        "chb08",
+        "chb10",
+        "chb11",
+        "chb12",
+        "chb13",
+        "chb15",
+        "chb16",
+        "chb17",
+        "chb20",
+        "chb23"
+      ],
+      "validation": [
+        "chb01_21",
+        "chb06",
+        "chb18",
+        "chb22"
+      ]
+    },
+    "4": {
+      "test": [
+        "chb03",
+        "chb08",
+        "chb13",
+        "chb18"
+      ],
+      "train": [
+        "chb01_21",
+        "chb02",
+        "chb04",
+        "chb06",
+        "chb07",
+        "chb09",
+        "chb10",
+        "chb11",
+        "chb12",
+        "chb14",
+        "chb17",
+        "chb19",
+        "chb20",
+        "chb22"
+      ],
+      "validation": [
+        "chb05",
+        "chb15",
+        "chb16",
+        "chb23"
+      ]
+    }
+  },
+  "issues": [],
+  "old_namespaces_preserved": [
+    "/root/b_false_alarm_atlas/outputs/reports/neurottt-chbmit-5fold-v1",
+    "/root/b_false_alarm_atlas/outputs/reports/neurottt-chbmit-5fold-v1-bandfix-v3"
+  ],
+  "outer_test_patient_count": 22,
+  "patient_count": 22,
+  "release_id": "meta-ttt-chbmit-5fold-v1",
+  "seizure_scoring": {
+    "alarm_time_truth_definition": "raw seizure interval; collar excluded from alarm-time subtraction",
+    "detection_delay_reference": "raw onset, clipped to evaluation start",
+    "offset_post_s": 60.0,
+    "onset_pre_s": 30.0,
+    "revision": "event_collar_30s_60s_raw_alarm_time_v1",
+    "training_labels_modified": false,
+    "truth_definition": "raw interval expanded to onset-30s and offset+60s for event matching, clipped to evaluable EDF"
+  },
+  "source_hashes": {
+    "cv_manifest": "889dc25388731a1084de97d1af486c1d85d69d37cd1a0f2df7f28fd991722a17",
+    "pretrained": "0792cb808c14e6b7a2bb2ce1dff379bc47bc54c49a779825bdfeb33bf8157178",
+    "windows": "c46f989a660710706c81c7b9de6b6f7c7e93b869be2da847904162e229f8122f"
+  },
+  "status": "passed",
+  "target_namespace": "/root/b_false_alarm_atlas/outputs/reports/meta-ttt-chbmit-5fold-v1",
+  "test_evaluation_count": 0,
+  "test_partition_read": false
+}

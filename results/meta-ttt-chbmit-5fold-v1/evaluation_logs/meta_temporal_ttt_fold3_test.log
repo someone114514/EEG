@@ -1,0 +1,32 @@
+/root/b_false_alarm_atlas/.venv/lib/python3.11/site-packages/torch/nn/modules/activation.py:1431: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_native_multi_head_attention. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:80.)
+  return torch._native_multi_head_attention(
+{
+  "release_id": "meta-ttt-chbmit-5fold-v1",
+  "condition": "meta_temporal_ttt",
+  "source_condition": "meta_temporal",
+  "ttt_objective": "temporal",
+  "fold": 3,
+  "seed": 3407,
+  "split": "test",
+  "checkpoint": "/root/b_false_alarm_atlas/outputs/reports/meta-ttt-chbmit-5fold-v1/runs/meta_temporal_fold3_seed3407/best.pt",
+  "checkpoint_sha256": "c4bbb7c179534f9273938b8da26414b46073512cb662e4214198f009788d5a14",
+  "probability_sha256": "08e752226b95877d0a88cc4ad6be7d4b2bc405d73e92f2fc09fa74531c152314",
+  "rows": 499259,
+  "elapsed_s": 1173.7725377099996,
+  "window_metrics": {
+    "window_auroc": 0.8764700607080336,
+    "window_auprc": 0.051813461863983064,
+    "window_balanced_accuracy_0p5": 0.8222093224240968
+  },
+  "ttt_steps": 1,
+  "ttt_optimizer": "SGD",
+  "ttt_lr": 0.00010099208157043904,
+  "episodic_restore": true,
+  "threshold_metric": "false_alarm_time_min_per_24h_then_fa_per_24h",
+  "seizure_scoring_revision": "event_collar_30s_60s_raw_alarm_time_v1",
+  "seizure_scoring_truth_definition": "raw interval expanded to onset-30s and offset+60s for event matching, clipped to evaluable EDF",
+  "alarm_time_truth_definition": "raw seizure interval for false-alarm time and its total-monitoring-time rate",
+  "detection_delay_reference": "raw onset, clipped to evaluation start",
+  "seizure_scoring_collar_onset_pre_s": 30.0,
+  "seizure_scoring_collar_offset_post_s": 60.0
+}

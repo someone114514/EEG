@@ -1,0 +1,5 @@
+numpy
+omegaconf
+pydantic>=2
+pyyaml
+torch

@@ -1,0 +1,30 @@
+{
+  "release_id": "meta-ttt-chbmit-5fold-v1",
+  "condition": "meta_temporal_frozen",
+  "source_condition": "meta_temporal",
+  "ttt_objective": null,
+  "fold": 1,
+  "seed": 3407,
+  "split": "test",
+  "checkpoint": "/root/b_false_alarm_atlas/outputs/reports/meta-ttt-chbmit-5fold-v1/runs/meta_temporal_fold1_seed3407/best.pt",
+  "checkpoint_sha256": "03cb3437f03a09fcc353ad08915b1f420eee2800e4a042b415e4b6575c87528c",
+  "probability_sha256": "a0bef2bab2ddf662664b30a18639063c7b11646908f91e2312800b6f953e4dd7",
+  "rows": 397716,
+  "elapsed_s": 95.8285562960009,
+  "window_metrics": {
+    "window_auroc": 0.9161272271782814,
+    "window_auprc": 0.17106121774710603,
+    "window_balanced_accuracy_0p5": 0.8117077149676695
+  },
+  "ttt_steps": 0,
+  "ttt_optimizer": null,
+  "ttt_lr": null,
+  "episodic_restore": false,
+  "threshold_metric": "false_alarm_time_min_per_24h_then_fa_per_24h",
+  "seizure_scoring_revision": "event_collar_30s_60s_raw_alarm_time_v1",
+  "seizure_scoring_truth_definition": "raw interval expanded to onset-30s and offset+60s for event matching, clipped to evaluable EDF",
+  "alarm_time_truth_definition": "raw seizure interval for false-alarm time and its total-monitoring-time rate",
+  "detection_delay_reference": "raw onset, clipped to evaluation start",
+  "seizure_scoring_collar_onset_pre_s": 30.0,
+  "seizure_scoring_collar_offset_post_s": 60.0
+}

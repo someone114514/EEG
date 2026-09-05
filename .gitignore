@@ -1,0 +1,21 @@
+# Local source bundle
+3ba45c08-e66a-4083-9a2b-533a3483592a.zip
+
+# Python / tooling caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environments
+.venv/
+venv/
+.env
+.env.*
+
+# Runtime outputs and model weights not part of the frozen release
+outputs/
+*.pt
+*.pth
+*.ckpt

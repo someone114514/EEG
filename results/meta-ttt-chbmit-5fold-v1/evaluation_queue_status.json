@@ -1,0 +1,80 @@
+{
+  "completed": [
+    {
+      "condition": "meta_temporal_ttt",
+      "finished_at": "2026-09-04T15:53:56.291614+00:00",
+      "fold": 0,
+      "return_code": 0,
+      "split": "test"
+    },
+    {
+      "condition": "meta_band_ttt",
+      "finished_at": "2026-09-04T15:54:50.755568+00:00",
+      "fold": 0,
+      "return_code": 0,
+      "split": "test"
+    },
+    {
+      "condition": "meta_band_ttt",
+      "finished_at": "2026-09-04T16:08:24.604904+00:00",
+      "fold": 1,
+      "return_code": 0,
+      "split": "test"
+    },
+    {
+      "condition": "meta_temporal_ttt",
+      "finished_at": "2026-09-04T16:09:26.266680+00:00",
+      "fold": 1,
+      "return_code": 0,
+      "split": "test"
+    },
+    {
+      "condition": "meta_band_ttt",
+      "finished_at": "2026-09-04T16:18:34.899965+00:00",
+      "fold": 2,
+      "return_code": 0,
+      "split": "test"
+    },
+    {
+      "condition": "meta_temporal_ttt",
+      "finished_at": "2026-09-04T16:19:39.252054+00:00",
+      "fold": 2,
+      "return_code": 0,
+      "split": "test"
+    },
+    {
+      "condition": "meta_band_ttt",
+      "finished_at": "2026-09-04T16:36:56.800368+00:00",
+      "fold": 3,
+      "return_code": 0,
+      "split": "test"
+    },
+    {
+      "condition": "meta_temporal_ttt",
+      "finished_at": "2026-09-04T16:37:43.942439+00:00",
+      "fold": 3,
+      "return_code": 0,
+      "split": "test"
+    },
+    {
+      "condition": "meta_band_ttt",
+      "finished_at": "2026-09-04T16:45:20.146570+00:00",
+      "fold": 4,
+      "return_code": 0,
+      "split": "test"
+    },
+    {
+      "condition": "meta_temporal_ttt",
+      "finished_at": "2026-09-04T16:45:47.364062+00:00",
+      "fold": 4,
+      "return_code": 0,
+      "split": "test"
+    }
+  ],
+  "failed": [],
+  "pending": [],
+  "phase": "test_ttt",
+  "running": [],
+  "status": "phase_complete",
+  "updated_at": "2026-09-04T16:45:47.364131+00:00"
+}

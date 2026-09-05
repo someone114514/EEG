@@ -1,0 +1,46 @@
+{
+  "release_id": "meta-ttt-chbmit-5fold-v1",
+  "created_at": "2026-09-01T06:41:29.925447+00:00",
+  "files": [
+    {
+      "path": "/mnt/c/Users/User/Documents/Codex/2026-08-03/du-q/work/NeuroTTT/CBraMod/chbmit_groupkfold/meta_model.py",
+      "sha256": "46399693e921aa32b2929bd03e3b98ffcddecb87b800ef82098c6f2cc53b4d76"
+    },
+    {
+      "path": "/mnt/c/Users/User/Documents/Codex/2026-08-03/du-q/work/NeuroTTT/CBraMod/chbmit_groupkfold/meta_train.py",
+      "sha256": "ee8306544fa25116d98630856610e086e9e0a8a4b92b725f2e350ba84d7f72ea"
+    },
+    {
+      "path": "/mnt/c/Users/User/Documents/Codex/2026-08-03/du-q/work/NeuroTTT/CBraMod/chbmit_groupkfold/meta_evaluate.py",
+      "sha256": "118a40abefa7c2dafe36c0ff8d2d1c3af75dab640133ecf92f05778238323577"
+    },
+    {
+      "path": "/mnt/c/Users/User/Documents/Codex/2026-08-03/du-q/work/NeuroTTT/CBraMod/chbmit_groupkfold/meta_summarize.py",
+      "sha256": "0e8ce9ca2c6ef267da3ca8275c4e5e55d5ac6e2091d33de830beb9ab2a04c5f0"
+    },
+    {
+      "path": "/mnt/c/Users/User/Documents/Codex/2026-08-03/du-q/work/NeuroTTT/CBraMod/chbmit_groupkfold_meta_train.py",
+      "sha256": "b62cfd1f3d20ebbaaad10cf0ab74464f3d0223a3be3351f40b72762da658a084"
+    },
+    {
+      "path": "/mnt/c/Users/User/Documents/Codex/2026-08-03/du-q/work/NeuroTTT/CBraMod/chbmit_groupkfold_meta_evaluate.py",
+      "sha256": "b7eab16ffec0fdff957227cf1f7f3062783ff1de9c8215bba122a48f01f5e305"
+    },
+    {
+      "path": "/mnt/c/Users/User/Documents/Codex/2026-08-03/du-q/work/NeuroTTT/CBraMod/chbmit_groupkfold_meta_queue.py",
+      "sha256": "d0385c10e05c2cffb2fba4be7856af6420c30a1c89b301736fe8c8b4b1ff2bf2"
+    },
+    {
+      "path": "/mnt/c/Users/User/Documents/Codex/2026-08-03/du-q/work/NeuroTTT/CBraMod/chbmit_groupkfold_meta_eval_queue.py",
+      "sha256": "a7ef67c15ff87dd3480b86003332a6653503b12bb80dbe5ad3e597f7d3193a84"
+    },
+    {
+      "path": "/mnt/c/Users/User/Documents/Codex/2026-08-03/du-q/work/NeuroTTT/CBraMod/chbmit_groupkfold_meta_preflight.py",
+      "sha256": "c4407a26b888b6d8d09b29c9ab56fef19b3c72da7a461bbc1ff2e01ba40a4360"
+    },
+    {
+      "path": "/mnt/c/Users/User/Documents/Codex/2026-08-03/du-q/work/NeuroTTT/CBraMod/chbmit_groupkfold_meta_smoke.py",
+      "sha256": "6127e933e578d595e6b4178112558c293380dcb52e0ad26854bada20ba6b7abc"
+    }
+  ]
+}

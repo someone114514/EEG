@@ -1,0 +1,17 @@
+{
+  "alpha": 0.00010820174793479964,
+  "condition": "meta_band",
+  "elapsed_s": 33500.794739633,
+  "epoch": 16,
+  "fold": 0,
+  "gpu_peak_mib": 9481.345703125,
+  "maximum_updates": 5300,
+  "objective": "band",
+  "post_classification_loss": 0.015825992685586245,
+  "pre_classification_loss": 0.023853333949409715,
+  "seed": 3407,
+  "ssl_loss": 2.6305938005447387,
+  "status": "training",
+  "update": 1800,
+  "updates_per_epoch": 106
+}

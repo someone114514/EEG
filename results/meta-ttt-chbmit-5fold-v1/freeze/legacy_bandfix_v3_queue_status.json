@@ -1,0 +1,24 @@
+{
+  "completed": [],
+  "failed": [],
+  "queued_remaining": 12,
+  "running": [
+    {
+      "condition": "detection_only",
+      "fold": 0,
+      "pid": 598
+    },
+    {
+      "condition": "band_joint",
+      "fold": 0,
+      "pid": 599
+    },
+    {
+      "condition": "mask_joint",
+      "fold": 0,
+      "pid": 600
+    }
+  ],
+  "status": "running",
+  "updated_at": "2026-09-01T06:33:05.696762+00:00"
+}

@@ -1,0 +1,257 @@
+{
+  "alarm_time_truth_definition": "raw seizure interval; onset/offset collar is excluded from alarm-time subtraction",
+  "artifacts": {
+    "bootstrap": {
+      "path": "/root/b_false_alarm_atlas/outputs/reports/meta-ttt-chbmit-5fold-v1/summary/patient_bootstrap_2000.parquet",
+      "sha256": "42229bb356d3ad4cac595656140e7d6bfad9c67b3f47adf0a327f6282f3d357a"
+    },
+    "comparisons": {
+      "path": "/root/b_false_alarm_atlas/outputs/reports/meta-ttt-chbmit-5fold-v1/summary/prespecified_comparisons.csv",
+      "sha256": "b26fcc0fc35ffbcb635be5e35e3ac500d45efba992f0775d3a7f21cc2e03ad46"
+    },
+    "condition_metrics": {
+      "path": "/root/b_false_alarm_atlas/outputs/reports/meta-ttt-chbmit-5fold-v1/summary/condition_metrics.csv",
+      "sha256": "c9430053dbe2132e0b47c11dd7917d3bfd050f3389092aa24067061405f5f793"
+    }
+  },
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 3407,
+  "comparisons": [
+    [
+      "meta_band_ttt",
+      "meta_band_frozen"
+    ],
+    [
+      "meta_temporal_ttt",
+      "meta_temporal_frozen"
+    ],
+    [
+      "meta_band_frozen",
+      "supervised_frozen"
+    ],
+    [
+      "meta_temporal_frozen",
+      "supervised_frozen"
+    ]
+  ],
+  "completed_at": "2026-09-04T16:45:53.634537+00:00",
+  "conditions": [
+    "supervised_frozen",
+    "meta_band_frozen",
+    "meta_band_ttt",
+    "meta_temporal_frozen",
+    "meta_temporal_ttt"
+  ],
+  "detection_delay_reference": "raw onset, clipped to evaluation start",
+  "false_alarm_event_rate_definition": "event matching uses collar-expanded truths; denominator uses raw non-seizure monitoring time",
+  "false_alarm_time_definition": "predicted_alarm_union minus raw seizure_union; total_monitoring_hours denominator",
+  "locks": {
+    "meta_band_frozen": {
+      "folds": [
+        {
+          "checkpoint_sha256": "e1b2a2a14d9ef288d0b274baa370e475ea2d590ab9357316f9e55b432b92f6c5",
+          "fold": 0,
+          "probability_sha256": "c9836f32f3fe74147d9f3d8426752c6c5c2fa8a7eb06dc6f7b2e3fd2859e3014",
+          "threshold": 0.06
+        },
+        {
+          "checkpoint_sha256": "de81df6cdc000ae9a7a25ff0f323108542896c84d0d611b283120e87413bb839",
+          "fold": 1,
+          "probability_sha256": "3189f2621de9483f8d59b3555b47a6724dfaa1e304281dcce4dd2217168a6e5d",
+          "threshold": 0.02
+        },
+        {
+          "checkpoint_sha256": "8f3b15d56d4324b0bab1e37e0c59d3426759046202d748dd5d04723681917de3",
+          "fold": 2,
+          "probability_sha256": "52d374d6bb5f44e0d4267b6615f179b1e18ead5e983e2bf96c5e9032ab5cedb6",
+          "threshold": 0.99
+        },
+        {
+          "checkpoint_sha256": "4f61d93b5957c6ee0297b1a18cb56695d5792c24fb8d7d0ed47e008c2cd415b0",
+          "fold": 3,
+          "probability_sha256": "e7e524c3e8f626734fb80cbc8563e314492d4c340d9bb02b77d597c13c547bb3",
+          "threshold": 0.93
+        },
+        {
+          "checkpoint_sha256": "39732f718e6310afbdefe53bbaf1ced752172eb20dbbf823ac28fad49c9cd443",
+          "fold": 4,
+          "probability_sha256": "604401cc0be689152a716c75bb9006a0642d3c0b5c6d7b3803fa66c563051750",
+          "threshold": 0.41
+        }
+      ],
+      "oof_sha256": "2f72c55511a7c42bec4e1743c84c44ba74272ed7191e31f91ced89f06a1c3409"
+    },
+    "meta_band_ttt": {
+      "folds": [
+        {
+          "checkpoint_sha256": "e1b2a2a14d9ef288d0b274baa370e475ea2d590ab9357316f9e55b432b92f6c5",
+          "fold": 0,
+          "probability_sha256": "d604e1f3a4529881abb732afc4f402f9397248bd1d0a0661381c2d347960b5c9",
+          "threshold": 0.06
+        },
+        {
+          "checkpoint_sha256": "de81df6cdc000ae9a7a25ff0f323108542896c84d0d611b283120e87413bb839",
+          "fold": 1,
+          "probability_sha256": "4ffd3c688526b3a2c891c9147a783bfc9e62c219c70ed106278417bc3c9a7a53",
+          "threshold": 0.02
+        },
+        {
+          "checkpoint_sha256": "8f3b15d56d4324b0bab1e37e0c59d3426759046202d748dd5d04723681917de3",
+          "fold": 2,
+          "probability_sha256": "a14fb48eebe46c68465cda3716799c5de7009a86c3d9d1c6a0e3ea25d3b7bd5d",
+          "threshold": 0.99
+        },
+        {
+          "checkpoint_sha256": "4f61d93b5957c6ee0297b1a18cb56695d5792c24fb8d7d0ed47e008c2cd415b0",
+          "fold": 3,
+          "probability_sha256": "f1e95a890bab0010c2ba213cce27133055b123cbc064a95172644d5803674838",
+          "threshold": 0.93
+        },
+        {
+          "checkpoint_sha256": "39732f718e6310afbdefe53bbaf1ced752172eb20dbbf823ac28fad49c9cd443",
+          "fold": 4,
+          "probability_sha256": "b441edfb468d8e9e36c93fb9bdf6a478470ba59c33ab38a6457e01a42000073b",
+          "threshold": 0.41
+        }
+      ],
+      "oof_sha256": "0df6fb591fc53b588b8c708f1cf823a9a8c0b3d0742ba7280c44d2630f4945c0"
+    },
+    "meta_temporal_frozen": {
+      "folds": [
+        {
+          "checkpoint_sha256": "e3c19dc9ffc7c3dbbfee0f8d5040e57ae1cd8898e510a1bd02875488e5921327",
+          "fold": 0,
+          "probability_sha256": "2247e518b9c6d2d9aa78d4c5361e17f5fafaeaebea9e2d135aafaa123b17c547",
+          "threshold": 0.79
+        },
+        {
+          "checkpoint_sha256": "03cb3437f03a09fcc353ad08915b1f420eee2800e4a042b415e4b6575c87528c",
+          "fold": 1,
+          "probability_sha256": "a0bef2bab2ddf662664b30a18639063c7b11646908f91e2312800b6f953e4dd7",
+          "threshold": 0.35
+        },
+        {
+          "checkpoint_sha256": "5b73de710b6b13de31a3bceb870b712cb992850b0ea2f6f1bb03569b28b8a72a",
+          "fold": 2,
+          "probability_sha256": "f3e05c83908672e0544702545616396a227be03fdce5d9ba42f98d68e77744e8",
+          "threshold": 0.82
+        },
+        {
+          "checkpoint_sha256": "c4bbb7c179534f9273938b8da26414b46073512cb662e4214198f009788d5a14",
+          "fold": 3,
+          "probability_sha256": "e3e880e2d7f721ff78190c4a06ba863cfe8007c61e2537838e7a063aae824600",
+          "threshold": 0.89
+        },
+        {
+          "checkpoint_sha256": "7ae7b044c5d4f937b7eb5a066a1e7a1902bd0449b05e4cbea44a27ca3161c0cb",
+          "fold": 4,
+          "probability_sha256": "708c415136fc57aaa603afab275abfb17a1e88f44b104801318d550edd8bf88d",
+          "threshold": 0.59
+        }
+      ],
+      "oof_sha256": "721f95d4c7273b80499871ec26a126c221a63f74afad82a5788309ab51a2b6b4"
+    },
+    "meta_temporal_ttt": {
+      "folds": [
+        {
+          "checkpoint_sha256": "e3c19dc9ffc7c3dbbfee0f8d5040e57ae1cd8898e510a1bd02875488e5921327",
+          "fold": 0,
+          "probability_sha256": "7249834484d8f0cdd76eb8045c8a3e325a34fb4098231fc7d11a102db8adb876",
+          "threshold": 0.79
+        },
+        {
+          "checkpoint_sha256": "03cb3437f03a09fcc353ad08915b1f420eee2800e4a042b415e4b6575c87528c",
+          "fold": 1,
+          "probability_sha256": "23727e3f16bbd9ede4391e14cdb43919d44bc60ac2291711480717f48e762d19",
+          "threshold": 0.35
+        },
+        {
+          "checkpoint_sha256": "5b73de710b6b13de31a3bceb870b712cb992850b0ea2f6f1bb03569b28b8a72a",
+          "fold": 2,
+          "probability_sha256": "f214d576755f07ea58d5616b1d85cea88da376728a87400fa653889f0da3fb5e",
+          "threshold": 0.81
+        },
+        {
+          "checkpoint_sha256": "c4bbb7c179534f9273938b8da26414b46073512cb662e4214198f009788d5a14",
+          "fold": 3,
+          "probability_sha256": "08e752226b95877d0a88cc4ad6be7d4b2bc405d73e92f2fc09fa74531c152314",
+          "threshold": 0.89
+        },
+        {
+          "checkpoint_sha256": "7ae7b044c5d4f937b7eb5a066a1e7a1902bd0449b05e4cbea44a27ca3161c0cb",
+          "fold": 4,
+          "probability_sha256": "a28d3a536269429d56a2968409794895ca953463afff58095b74404588cac82a",
+          "threshold": 0.59
+        }
+      ],
+      "oof_sha256": "09f86c1941f99a058cdb8d44b863367b493972f24e11087d124957549f77f0a4"
+    },
+    "supervised_frozen": {
+      "folds": [
+        {
+          "checkpoint_sha256": "300d5606a7643f413389d920b0355d8c4591a5c091e7419c5c177d1e0f088776",
+          "fold": 0,
+          "probability_sha256": "c9ed84c99237b8a1be4865cd4686b2e33f29eab026b5e6623ff3f995b502539c",
+          "threshold": 0.1
+        },
+        {
+          "checkpoint_sha256": "895842fa2f234bbdbac7acfd47fa11bf4c0a399e177da994046490f42e211147",
+          "fold": 1,
+          "probability_sha256": "bedf1386b7c203e395b5beedff20548ed38599aba9cc4c34afc09a2dc58ecf63",
+          "threshold": 0.16
+        },
+        {
+          "checkpoint_sha256": "417e82fe95b6a43b8f40388d3edcae0dbf135beada667ec0a84204cb532bde29",
+          "fold": 2,
+          "probability_sha256": "1d0332e0673732626048f6816f956c101c86d4c329ebb1b0787bcd1290b8af74",
+          "threshold": 0.74
+        },
+        {
+          "checkpoint_sha256": "845a3e94c4038f18d9577780e6f65cf697398278b5fbf261c857fc468997f271",
+          "fold": 3,
+          "probability_sha256": "e8c8234f5598b50eda013507ec6ddf38c0b82ead3c90296b7b3f85f079a7f633",
+          "threshold": 0.77
+        },
+        {
+          "checkpoint_sha256": "cd6d3f8f3a0db6001c3f5763422c0966e1ee9a9bb70feecc16c20379fc753c8b",
+          "fold": 4,
+          "probability_sha256": "26e1a3aeffca4f218f50b14a61d2cca7c8974a26e1af8a2afd21220b69edb8d0",
+          "threshold": 0.61
+        }
+      ],
+      "oof_sha256": "6344c6dbd710af3245545d90f620ba416203b39b3e7480c2a4b95bcad13dca65"
+    }
+  },
+  "patients": [
+    "chb01_21",
+    "chb02",
+    "chb03",
+    "chb04",
+    "chb05",
+    "chb06",
+    "chb07",
+    "chb08",
+    "chb09",
+    "chb10",
+    "chb11",
+    "chb12",
+    "chb13",
+    "chb14",
+    "chb15",
+    "chb16",
+    "chb17",
+    "chb18",
+    "chb19",
+    "chb20",
+    "chb22",
+    "chb23"
+  ],
+  "release_id": "meta-ttt-chbmit-5fold-v1",
+  "seizure_scoring_collar_offset_post_s": 60.0,
+  "seizure_scoring_collar_onset_pre_s": 30.0,
+  "seizure_scoring_revision": "event_collar_30s_60s_raw_alarm_time_v1",
+  "seizure_scoring_truth_definition": "raw interval expanded to onset-30s and offset+60s for event matching, clipped to evaluable EDF",
+  "status": "complete",
+  "test_evaluation_count_per_fold_condition": 1,
+  "threshold_source": "validation_only_per_fold_condition"
+}

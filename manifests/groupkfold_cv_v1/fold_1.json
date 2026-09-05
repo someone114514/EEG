@@ -1,0 +1,59 @@
+{
+  "algorithm": {
+    "assignment_inputs": [
+      "canonical patient_id only"
+    ],
+    "group_column": "canonical patient_id",
+    "inner": "sklearn.model_selection.GroupShuffleSplit",
+    "inner_random_state": 20260820,
+    "inner_test_size": 0.2,
+    "outer": "sklearn.model_selection.GroupKFold",
+    "outer_n_splits": 5
+  },
+  "fold": 1,
+  "stats": {
+    "test": {
+      "hours": 224.91416666666666,
+      "patients": 5.0,
+      "seizures": 37.0
+    },
+    "train": {
+      "hours": 616.3788888888889,
+      "patients": 13.0,
+      "seizures": 76.0
+    },
+    "validation": {
+      "hours": 120.34583333333333,
+      "patients": 4.0,
+      "seizures": 69.0
+    }
+  },
+  "test": [
+    "chb01_21",
+    "chb06",
+    "chb11",
+    "chb16",
+    "chb22"
+  ],
+  "train": [
+    "chb02",
+    "chb03",
+    "chb04",
+    "chb05",
+    "chb07",
+    "chb08",
+    "chb09",
+    "chb10",
+    "chb13",
+    "chb14",
+    "chb19",
+    "chb20",
+    "chb23"
+  ],
+  "validation": [
+    "chb12",
+    "chb15",
+    "chb17",
+    "chb18"
+  ]
+}

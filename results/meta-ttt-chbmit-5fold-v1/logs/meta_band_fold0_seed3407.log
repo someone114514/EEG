@@ -1,0 +1,138 @@
+/root/b_false_alarm_atlas/.venv/lib/python3.11/site-packages/torch/nn/modules/activation.py:1431: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_native_multi_head_attention. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:80.)
+  return torch._native_multi_head_attention(
+{"epoch": 0, "update": 106, "train": {"post_classification_loss": 0.43779899879305995, "pre_classification_loss": 0.43908049493044055, "ssl_loss": 1.608673095703125, "alpha": 0.00010014078993062524}, "alpha": 0.00010049643606180325, "frozen_validation": {"rows": 540350, "auprc": 0.017870966143023054, "auroc": 0.8783570902285138, "balanced_accuracy_0p5": 0.7918963355651907, "positive_prevalence": 0.0011511057382449508}, "post_ttt_validation": {"rows": 540350, "auprc": 0.01782039201162052, "auroc": 0.8781444042005486, "balanced_accuracy_0p5": 0.7913645862396046, "positive_prevalence": 0.0011511057382449508}, "epoch_seconds": 1895.8799039099995, "learning_rate": 9.990232305719945e-05}
+/root/b_false_alarm_atlas/.venv/lib/python3.11/site-packages/torch/nn/modules/activation.py:1431: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_native_multi_head_attention. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:80.)
+  return torch._native_multi_head_attention(
+{"epoch": 1, "update": 212, "train": {"post_classification_loss": 0.2188483806291841, "pre_classification_loss": 0.22314915536322966, "ssl_loss": 1.636295534529776, "alpha": 0.0001010357255784944}, "alpha": 0.00010169242159463465, "frozen_validation": {"rows": 540350, "auprc": 0.26205272420651454, "auroc": 0.8771219766121566, "balanced_accuracy_0p5": 0.7758910812096087, "positive_prevalence": 0.0011511057382449508}, "post_ttt_validation": {"rows": 540350, "auprc": 0.2632392244881268, "auroc": 0.8768400047617173, "balanced_accuracy_0p5": 0.7765207779304912, "positive_prevalence": 0.0011511057382449508}, "epoch_seconds": 1782.1033009029998, "learning_rate": 9.960967771506655e-05}
+/root/b_false_alarm_atlas/.venv/lib/python3.11/site-packages/torch/nn/modules/activation.py:1431: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_native_multi_head_attention. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:80.)
+  return torch._native_multi_head_attention(
+{"epoch": 2, "update": 318, "train": {"post_classification_loss": 0.147059054823399, "pre_classification_loss": 0.14813263587794215, "ssl_loss": 1.7298877644089032, "alpha": 0.00010231933347828124}, "alpha": 0.00010276208922732621, "frozen_validation": {"rows": 540350, "auprc": 0.2673161894807075, "auroc": 0.9046135305333742, "balanced_accuracy_0p5": 0.8295015523122139, "positive_prevalence": 0.0011511057382449508}, "post_ttt_validation": {"rows": 540350, "auprc": 0.26849608120769125, "auroc": 0.9044478835022105, "balanced_accuracy_0p5": 0.8303257914692865, "positive_prevalence": 0.0011511057382449508}, "epoch_seconds": 1632.66914662, "learning_rate": 9.912321891107001e-05}
+/root/b_false_alarm_atlas/.venv/lib/python3.11/site-packages/torch/nn/modules/activation.py:1431: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_native_multi_head_attention. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:80.)
+  return torch._native_multi_head_attention(
+{"epoch": 3, "update": 424, "train": {"post_classification_loss": 0.11917137624783758, "pre_classification_loss": 0.11586707433738377, "ssl_loss": 1.81794580423607, "alpha": 0.00010323270667730919}, "alpha": 0.00010364682384533808, "frozen_validation": {"rows": 540350, "auprc": 0.024152657528822195, "auroc": 0.8546387004105344, "balanced_accuracy_0p5": 0.7909417401672277, "positive_prevalence": 0.0011511057382449508}, "post_ttt_validation": {"rows": 540350, "auprc": 0.024128640239169608, "auroc": 0.8545385383114972, "balanced_accuracy_0p5": 0.7910158515714907, "positive_prevalence": 0.0011511057382449508}, "epoch_seconds": 1679.528943745001, "learning_rate": 9.844486647586708e-05}
+/root/b_false_alarm_atlas/.venv/lib/python3.11/site-packages/torch/nn/modules/activation.py:1431: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_native_multi_head_attention. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:80.)
+  return torch._native_multi_head_attention(
+{"epoch": 4, "update": 530, "train": {"post_classification_loss": 0.0913380509223745, "pre_classification_loss": 0.09024935032412375, "ssl_loss": 1.8632782990077756, "alpha": 0.00010391751568948955}, "alpha": 0.00010419936006655917, "frozen_validation": {"rows": 540350, "auprc": 0.11417230000919419, "auroc": 0.8509333193482811, "balanced_accuracy_0p5": 0.7969311390908537, "positive_prevalence": 0.0011511057382449508}, "post_ttt_validation": {"rows": 540350, "auprc": 0.11524165880251415, "auroc": 0.8508887378236869, "balanced_accuracy_0p5": 0.7963153382582704, "positive_prevalence": 0.0011511057382449508}, "epoch_seconds": 2012.8790571729987, "learning_rate": 9.757729755660986e-05}
+/root/b_false_alarm_atlas/.venv/lib/python3.11/site-packages/torch/nn/modules/activation.py:1431: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_native_multi_head_attention. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:80.)
+  return torch._native_multi_head_attention(
+{"epoch": 5, "update": 636, "train": {"post_classification_loss": 0.07301398379813862, "pre_classification_loss": 0.07209700533795117, "ssl_loss": 2.0307355916725016, "alpha": 0.00010450066138390575}, "alpha": 0.0001048060876200907, "frozen_validation": {"rows": 540350, "auprc": 0.160730222118439, "auroc": 0.879589624243742, "balanced_accuracy_0p5": 0.8069760880149897, "positive_prevalence": 0.0011511057382449508}, "post_ttt_validation": {"rows": 540350, "auprc": 0.1603233728153339, "auroc": 0.8793560914045736, "balanced_accuracy_0p5": 0.806747269054328, "positive_prevalence": 0.0011511057382449508}, "epoch_seconds": 1696.4470762870005, "learning_rate": 9.65239360514682e-05}
+/root/b_false_alarm_atlas/.venv/lib/python3.11/site-packages/torch/nn/modules/activation.py:1431: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_native_multi_head_attention. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:80.)
+  return torch._native_multi_head_attention(
+{"epoch": 6, "update": 742, "train": {"post_classification_loss": 0.0616504675230969, "pre_classification_loss": 0.06734146957641537, "ssl_loss": 2.1216963462109835, "alpha": 0.00010498757869497222}, "alpha": 0.00010517174086999148, "frozen_validation": {"rows": 540350, "auprc": 0.262046780814591, "auroc": 0.8839231128615171, "balanced_accuracy_0p5": 0.8089686839282533, "positive_prevalence": 0.0011511057382449508}, "post_ttt_validation": {"rows": 540350, "auprc": 0.26203410173263103, "auroc": 0.8837176473337099, "balanced_accuracy_0p5": 0.8096391419214805, "positive_prevalence": 0.0011511057382449508}, "epoch_seconds": 1674.8570684909992, "learning_rate": 9.528893909706774e-05}
+/root/b_false_alarm_atlas/.venv/lib/python3.11/site-packages/torch/nn/modules/activation.py:1431: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_native_multi_head_attention. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:80.)
+  return torch._native_multi_head_attention(
+{"epoch": 7, "update": 848, "train": {"post_classification_loss": 0.06669806672248084, "pre_classification_loss": 0.0670246058886372, "ssl_loss": 2.1611211164942326, "alpha": 0.00010538686457845681}, "alpha": 0.00010556288907537237, "frozen_validation": {"rows": 540350, "auprc": 0.1521675205649746, "auroc": 0.8755972387258443, "balanced_accuracy_0p5": 0.8005766754920401, "positive_prevalence": 0.0011511057382449508}, "post_ttt_validation": {"rows": 540350, "auprc": 0.1521225792887665, "auroc": 0.8754911399697053, "balanced_accuracy_0p5": 0.8020908268859589, "positive_prevalence": 0.0011511057382449508}, "epoch_seconds": 1722.66593139, "learning_rate": 9.387718066217102e-05}
+/root/b_false_alarm_atlas/.venv/lib/python3.11/site-packages/torch/nn/modules/activation.py:1431: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_native_multi_head_attention. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:80.)
+  return torch._native_multi_head_attention(
+{"epoch": 8, "update": 954, "train": {"post_classification_loss": 0.049300752845189186, "pre_classification_loss": 0.047759191746527506, "ssl_loss": 2.332417218190319, "alpha": 0.00010573387682495006}, "alpha": 0.0001058942943927832, "frozen_validation": {"rows": 540350, "auprc": 0.18269428601424398, "auroc": 0.8690631790665929, "balanced_accuracy_0p5": 0.7689177729680298, "positive_prevalence": 0.0011511057382449508}, "post_ttt_validation": {"rows": 540350, "auprc": 0.18258333592430956, "auroc": 0.8689185233162102, "balanced_accuracy_0p5": 0.7688872020137714, "positive_prevalence": 0.0011511057382449508}, "epoch_seconds": 1672.418668260998, "learning_rate": 9.229423231234953e-05}
+/root/b_false_alarm_atlas/.venv/lib/python3.11/site-packages/torch/nn/modules/activation.py:1431: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_native_multi_head_attention. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:80.)
+  return torch._native_multi_head_attention(
+{"epoch": 9, "update": 1060, "train": {"post_classification_loss": 0.042942859343349724, "pre_classification_loss": 0.0418694753883893, "ssl_loss": 2.3327987508953743, "alpha": 0.00010602644939559846}, "alpha": 0.0001061750590451993, "frozen_validation": {"rows": 540350, "auprc": 0.30169816720846615, "auroc": 0.8677492639974994, "balanced_accuracy_0p5": 0.7514235674789816, "positive_prevalence": 0.0011511057382449508}, "post_ttt_validation": {"rows": 540350, "auprc": 0.3014589774908856, "auroc": 0.8675683002122876, "balanced_accuracy_0p5": 0.7513494560747187, "positive_prevalence": 0.0011511057382449508}, "epoch_seconds": 1650.2318033720003, "learning_rate": 9.05463412215597e-05}
+/root/b_false_alarm_atlas/.venv/lib/python3.11/site-packages/torch/nn/modules/activation.py:1431: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_native_multi_head_attention. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:80.)
+  return torch._native_multi_head_attention(
+{"epoch": 10, "update": 1166, "train": {"post_classification_loss": 0.03497847008859609, "pre_classification_loss": 0.03903651245218498, "ssl_loss": 2.642344875155755, "alpha": 0.0001063513270807716}, "alpha": 0.00010650968761183321, "frozen_validation": {"rows": 540350, "auprc": 0.13271167718127994, "auroc": 0.8771994465617694, "balanced_accuracy_0p5": 0.7746781563332175, "positive_prevalence": 0.0011511057382449508}, "post_ttt_validation": {"rows": 540350, "auprc": 0.13147742290035008, "auroc": 0.877015852536607, "balanced_accuracy_0p5": 0.774731887101308, "positive_prevalence": 0.0011511057382449508}, "epoch_seconds": 1770.5786660880003, "learning_rate": 8.864040551740135e-05}
+/root/b_false_alarm_atlas/.venv/lib/python3.11/site-packages/torch/nn/modules/activation.py:1431: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_native_multi_head_attention. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:80.)
+  return torch._native_multi_head_attention(
+{"epoch": 11, "update": 1272, "train": {"post_classification_loss": 0.0473749653479762, "pre_classification_loss": 0.047632863333075086, "ssl_loss": 2.6212579934102185, "alpha": 0.0001066889722868888}, "alpha": 0.00010684331209631637, "frozen_validation": {"rows": 540350, "auprc": 0.26318965438364045, "auroc": 0.870529585498967, "balanced_accuracy_0p5": 0.784060660112899, "positive_prevalence": 0.0011511057382449508}, "post_ttt_validation": {"rows": 540350, "auprc": 0.26308520133741237, "auroc": 0.8704821890516629, "balanced_accuracy_0p5": 0.7839782111756566, "positive_prevalence": 0.0011511057382449508}, "epoch_seconds": 1732.8178251659992, "learning_rate": 8.65839470573596e-05}
+/root/b_false_alarm_atlas/.venv/lib/python3.11/site-packages/torch/nn/modules/activation.py:1431: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_native_multi_head_attention. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:80.)
+  return torch._native_multi_head_attention(
+{"epoch": 12, "update": 1378, "train": {"post_classification_loss": 0.030223632830419997, "pre_classification_loss": 0.032563406427076225, "ssl_loss": 2.7202046929665333, "alpha": 0.00010701963236777305}, "alpha": 0.00010722759907366708, "frozen_validation": {"rows": 540350, "auprc": 0.14978618403606703, "auroc": 0.8846558625623785, "balanced_accuracy_0p5": 0.8111841412937973, "positive_prevalence": 0.0011511057382449508}, "post_ttt_validation": {"rows": 540350, "auprc": 0.148569556010932, "auroc": 0.8846214162489181, "balanced_accuracy_0p5": 0.8110831645054891, "positive_prevalence": 0.0011511057382449508}, "epoch_seconds": 1715.6100955209986, "learning_rate": 8.43850817434698e-05}
+/root/b_false_alarm_atlas/.venv/lib/python3.11/site-packages/torch/nn/modules/activation.py:1431: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_native_multi_head_attention. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:80.)
+  return torch._native_multi_head_attention(
+{"epoch": 13, "update": 1484, "train": {"post_classification_loss": 0.02724504447171469, "pre_classification_loss": 0.030383528780716144, "ssl_loss": 2.8318788735371716, "alpha": 0.0001073380467374282}, "alpha": 0.00010747712076408789, "frozen_validation": {"rows": 540350, "auprc": 0.14951284076187277, "auroc": 0.8761750783150222, "balanced_accuracy_0p5": 0.7777996732759423, "positive_prevalence": 0.0011511057382449508}, "post_ttt_validation": {"rows": 540350, "auprc": 0.14848311979072004, "auroc": 0.8759084425805334, "balanced_accuracy_0p5": 0.7785636969170513, "positive_prevalence": 0.0011511057382449508}, "epoch_seconds": 2996.2422622390004, "learning_rate": 8.205248749255988e-05}
+/root/b_false_alarm_atlas/.venv/lib/python3.11/site-packages/torch/nn/modules/activation.py:1431: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_native_multi_head_attention. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:80.)
+  return torch._native_multi_head_attention(
+{"epoch": 14, "update": 1590, "train": {"post_classification_loss": 0.026531308614129608, "pre_classification_loss": 0.0285258845881044, "ssl_loss": 2.826349631795343, "alpha": 0.00010764385901121334}, "alpha": 0.00010776109411381185, "frozen_validation": {"rows": 540350, "auprc": 0.21172654046589148, "auroc": 0.8846014228507906, "balanced_accuracy_0p5": 0.779596901638105, "positive_prevalence": 0.0011511057382449508}, "post_ttt_validation": {"rows": 540350, "auprc": 0.21155933127341328, "auroc": 0.8844397450095858, "balanced_accuracy_0p5": 0.7796969520338599, "positive_prevalence": 0.0011511057382449508}, "epoch_seconds": 3819.7737393860007, "learning_rate": 7.959536998847723e-05}
+/root/b_false_alarm_atlas/.venv/lib/python3.11/site-packages/torch/nn/modules/activation.py:1431: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_native_multi_head_attention. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:80.)
+  return torch._native_multi_head_attention(
+{"epoch": 15, "update": 1696, "train": {"post_classification_loss": 0.027319741456807916, "pre_classification_loss": 0.028680594874733185, "ssl_loss": 2.9752479240579426, "alpha": 0.00010790563341425643}, "alpha": 0.00010802047472679988, "frozen_validation": {"rows": 540350, "auprc": 0.080515018000468, "auroc": 0.8453691703516636, "balanced_accuracy_0p5": 0.7747907294115898, "positive_prevalence": 0.0011511057382449508}, "post_ttt_validation": {"rows": 540350, "auprc": 0.0793764835871992, "auroc": 0.8450717521713688, "balanced_accuracy_0p5": 0.7747193971849868, "positive_prevalence": 0.0011511057382449508}, "epoch_seconds": 3799.5466283979986, "learning_rate": 7.702342635146012e-05}
+/root/b_false_alarm_atlas/.venv/lib/python3.11/site-packages/torch/nn/modules/activation.py:1431: UserWarning: There is a performance drop because we have not yet implemented the batching rule for aten::_native_multi_head_attention. Please file us an issue on GitHub so that we can prioritize its implementation. (Triggered internally at /pytorch/aten/src/ATen/functorch/BatchedFallback.cpp:80.)
+  return torch._native_multi_head_attention(
+{"epoch": 16, "update": 1802, "train": {"post_classification_loss": 0.02756060140450674, "pre_classification_loss": 0.027399781329934758, "ssl_loss": 2.8417175513393476, "alpha": 0.0001081031977659188}, "alpha": 0.00010820907482411712, "frozen_validation": {"rows": 540350, "auprc": 0.04137176846095715, "auroc": 0.8646983003371568, "balanced_accuracy_0p5": 0.7846403644022002, "positive_prevalence": 0.0011511057382449508}, "post_ttt_validation": {"rows": 540350, "auprc": 0.041210544311005744, "auroc": 0.8644310271492711, "balanced_accuracy_0p5": 0.7829159218986856, "positive_prevalence": 0.0011511057382449508}, "epoch_seconds": 3735.0992508749987, "learning_rate": 7.434680686803468e-05}
+{
+  "release_id": "meta-ttt-chbmit-5fold-v1",
+  "status": "training_complete",
+  "started_at": "2026-09-02T06:37:34.494144+00:00",
+  "condition": "meta_band",
+  "objective": "band",
+  "fold": 0,
+  "seed": 3407,
+  "test_partition_read": false,
+  "source_training": "post_update_classification_only",
+  "inner_update": "last_two_transformer_blocks_plus_ssl_head",
+  "outer_objective": "post_update_detection_bce_only",
+  "inner_step_size": {
+    "type": "learned_bounded_scalar",
+    "lower": 1e-06,
+    "upper": 0.001,
+    "initial": 0.0001
+  },
+  "input": "16 channels x 10 patches x 200 samples; existing cache already microvolts/100; no second scaling",
+  "train_rows": 855654,
+  "train_positive_rows": 6731,
+  "validation_rows": 540350,
+  "train_patients": [
+    "chb01_21",
+    "chb03",
+    "chb05",
+    "chb08",
+    "chb09",
+    "chb11",
+    "chb13",
+    "chb14",
+    "chb15",
+    "chb16",
+    "chb18",
+    "chb20",
+    "chb22"
+  ],
+  "validation_patients": [
+    "chb04",
+    "chb06",
+    "chb10",
+    "chb19"
+  ],
+  "updates_per_epoch": 106,
+  "accumulation": 4,
+  "config": {
+    "condition": "meta_band",
+    "fold": 0,
+    "seed": 3407,
+    "output_root": "/root/b_false_alarm_atlas/outputs/reports/meta-ttt-chbmit-5fold-v1",
+    "windows": "/root/b_false_alarm_atlas/manifests/windows.parquet",
+    "fold_root": "/root/b_false_alarm_atlas/manifests/groupkfold_cv_v1",
+    "cache_root": "/mnt/d/EEGData/bfa_cache_v3_official_noclip/cbramod",
+    "pretrained": "/mnt/c/Users/User/Documents/Codex/2026-08-03/du-q/work/NeuroTTT/CBraMod/pretrained_weights/pretrained_weights.pth",
+    "batch_size": 32,
+    "effective_batch": 128,
+    "eval_batch_size": 64,
+    "workers": 8,
+    "epochs": 50,
+    "minimum_epochs": 5,
+    "patience": 7,
+    "min_delta": 0.002,
+    "lr": 0.0001,
+    "weight_decay": 0.05,
+    "initial_alpha": 0.0001,
+    "max_updates": null,
+    "validation_limit": null,
+    "device": "cuda"
+  },
+  "source_hashes": {
+    "windows": "c46f989a660710706c81c7b9de6b6f7c7e93b869be2da847904162e229f8122f",
+    "cv_manifest": "889dc25388731a1084de97d1af486c1d85d69d37cd1a0f2df7f28fd991722a17",
+    "fold": "c30cabe7348cfe8e3a17dbaf8be94d7f13325fdeb11b2290b2490e83987c09d1",
+    "pretrained": "0792cb808c14e6b7a2bb2ce1dff379bc47bc54c49a779825bdfeb33bf8157178"
+  },
+  "completed_at": "2026-09-02T16:16:10.807472+00:00",
+  "epochs_completed": 17,
+  "updates_completed": 1802,
+  "best_validation_post_ttt_auprc": 0.3014589774908856,
+  "best_checkpoint": "/root/b_false_alarm_atlas/outputs/reports/meta-ttt-chbmit-5fold-v1/runs/meta_band_fold0_seed3407/best.pt",
+  "last_checkpoint": "/root/b_false_alarm_atlas/outputs/reports/meta-ttt-chbmit-5fold-v1/runs/meta_band_fold0_seed3407/last.pt",
+  "alpha_final": 0.00010820907482411712,
+  "alpha_at_boundary": false,
+  "gpu_peak_mib": 9481.345703125,
+  "elapsed_s": 37015.752270341,
+  "test_evaluation_count": 0
+}

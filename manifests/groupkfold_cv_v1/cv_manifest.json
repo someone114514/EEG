@@ -1,0 +1,320 @@
+{
+  "algorithm": "sklearn GroupKFold outer + GroupShuffleSplit inner",
+  "assignment_inputs": [
+    "canonical patient_id only"
+  ],
+  "folds": [
+    {
+      "algorithm": {
+        "assignment_inputs": [
+          "canonical patient_id only"
+        ],
+        "group_column": "canonical patient_id",
+        "inner": "sklearn.model_selection.GroupShuffleSplit",
+        "inner_random_state": 20260819,
+        "inner_test_size": 0.2,
+        "outer": "sklearn.model_selection.GroupKFold",
+        "outer_n_splits": 5
+      },
+      "fold": 0,
+      "stats": {
+        "test": {
+          "hours": 173.57805555555555,
+          "patients": 5.0,
+          "seizures": 56.0
+        },
+        "train": {
+          "hours": 485.30805555555554,
+          "patients": 13.0,
+          "seizures": 102.0
+        },
+        "validation": {
+          "hours": 302.7527777777778,
+          "patients": 4.0,
+          "seizures": 24.0
+        }
+      },
+      "test": [
+        "chb02",
+        "chb07",
+        "chb12",
+        "chb17",
+        "chb23"
+      ],
+      "train": [
+        "chb01_21",
+        "chb03",
+        "chb05",
+        "chb08",
+        "chb09",
+        "chb11",
+        "chb13",
+        "chb14",
+        "chb15",
+        "chb16",
+        "chb18",
+        "chb20",
+        "chb22"
+      ],
+      "validation": [
+        "chb04",
+        "chb06",
+        "chb10",
+        "chb19"
+      ]
+    },
+    {
+      "algorithm": {
+        "assignment_inputs": [
+          "canonical patient_id only"
+        ],
+        "group_column": "canonical patient_id",
+        "inner": "sklearn.model_selection.GroupShuffleSplit",
+        "inner_random_state": 20260820,
+        "inner_test_size": 0.2,
+        "outer": "sklearn.model_selection.GroupKFold",
+        "outer_n_splits": 5
+      },
+      "fold": 1,
+      "stats": {
+        "test": {
+          "hours": 224.91416666666666,
+          "patients": 5.0,
+          "seizures": 37.0
+        },
+        "train": {
+          "hours": 616.3788888888889,
+          "patients": 13.0,
+          "seizures": 76.0
+        },
+        "validation": {
+          "hours": 120.34583333333333,
+          "patients": 4.0,
+          "seizures": 69.0
+        }
+      },
+      "test": [
+        "chb01_21",
+        "chb06",
+        "chb11",
+        "chb16",
+        "chb22"
+      ],
+      "train": [
+        "chb02",
+        "chb03",
+        "chb04",
+        "chb05",
+        "chb07",
+        "chb08",
+        "chb09",
+        "chb10",
+        "chb13",
+        "chb14",
+        "chb19",
+        "chb20",
+        "chb23"
+      ],
+      "validation": [
+        "chb12",
+        "chb15",
+        "chb17",
+        "chb18"
+      ]
+    },
+    {
+      "algorithm": {
+        "assignment_inputs": [
+          "canonical patient_id only"
+        ],
+        "group_column": "canonical patient_id",
+        "inner": "sklearn.model_selection.GroupShuffleSplit",
+        "inner_random_state": 20260821,
+        "inner_test_size": 0.2,
+        "outer": "sklearn.model_selection.GroupKFold",
+        "outer_n_splits": 5
+      },
+      "fold": 2,
+      "stats": {
+        "test": {
+          "hours": 156.63777777777779,
+          "patients": 4.0,
+          "seizures": 40.0
+        },
+        "train": {
+          "hours": 608.1058333333333,
+          "patients": 14.0,
+          "seizures": 116.0
+        },
+        "validation": {
+          "hours": 196.89527777777778,
+          "patients": 4.0,
+          "seizures": 26.0
+        }
+      },
+      "test": [
+        "chb05",
+        "chb10",
+        "chb15",
+        "chb20"
+      ],
+      "train": [
+        "chb02",
+        "chb03",
+        "chb04",
+        "chb06",
+        "chb07",
+        "chb11",
+        "chb12",
+        "chb13",
+        "chb14",
+        "chb16",
+        "chb17",
+        "chb19",
+        "chb22",
+        "chb23"
+      ],
+      "validation": [
+        "chb01_21",
+        "chb08",
+        "chb09",
+        "chb18"
+      ]
+    },
+    {
+      "algorithm": {
+        "assignment_inputs": [
+          "canonical patient_id only"
+        ],
+        "group_column": "canonical patient_id",
+        "inner": "sklearn.model_selection.GroupShuffleSplit",
+        "inner_random_state": 20260822,
+        "inner_test_size": 0.2,
+        "outer": "sklearn.model_selection.GroupKFold",
+        "outer_n_splits": 5
+      },
+      "fold": 3,
+      "stats": {
+        "test": {
+          "hours": 279.86611111111114,
+          "patients": 4.0,
+          "seizures": 19.0
+        },
+        "train": {
+          "hours": 475.0175,
+          "patients": 14.0,
+          "seizures": 133.0
+        },
+        "validation": {
+          "hours": 206.7552777777778,
+          "patients": 4.0,
+          "seizures": 30.0
+        }
+      },
+      "test": [
+        "chb04",
+        "chb09",
+        "chb14",
+        "chb19"
+      ],
+      "train": [
+        "chb02",
+        "chb03",
+        "chb05",
+        "chb07",
+        "chb08",
+        "chb10",
+        "chb11",
+        "chb12",
+        "chb13",
+        "chb15",
+        "chb16",
+        "chb17",
+        "chb20",
+        "chb23"
+      ],
+      "validation": [
+        "chb01_21",
+        "chb06",
+        "chb18",
+        "chb22"
+      ]
+    },
+    {
+      "algorithm": {
+        "assignment_inputs": [
+          "canonical patient_id only"
+        ],
+        "group_column": "canonical patient_id",
+        "inner": "sklearn.model_selection.GroupShuffleSplit",
+        "inner_random_state": 20260823,
+        "inner_test_size": 0.2,
+        "outer": "sklearn.model_selection.GroupKFold",
+        "outer_n_splits": 5
+      },
+      "fold": 4,
+      "stats": {
+        "test": {
+          "hours": 126.64277777777778,
+          "patients": 4.0,
+          "seizures": 30.0
+        },
+        "train": {
+          "hours": 710.425,
+          "patients": 14.0,
+          "seizures": 110.0
+        },
+        "validation": {
+          "hours": 124.57111111111111,
+          "patients": 4.0,
+          "seizures": 42.0
+        }
+      },
+      "test": [
+        "chb03",
+        "chb08",
+        "chb13",
+        "chb18"
+      ],
+      "train": [
+        "chb01_21",
+        "chb02",
+        "chb04",
+        "chb06",
+        "chb07",
+        "chb09",
+        "chb10",
+        "chb11",
+        "chb12",
+        "chb14",
+        "chb17",
+        "chb19",
+        "chb20",
+        "chb22"
+      ],
+      "validation": [
+        "chb05",
+        "chb15",
+        "chb16",
+        "chb23"
+      ]
+    }
+  ],
+  "forbidden_inputs": [
+    "seizure count",
+    "recording duration",
+    "signal quality",
+    "model predictions",
+    "test outcomes"
+  ],
+  "group_unit": "canonical patient",
+  "inner_seed_base": 20260819,
+  "inner_validation_fraction": 0.2,
+  "outer_fold_count": 5,
+  "patient_count": 22,
+  "protocol": "v3-groupkfold-confirmatory-v1",
+  "source_recordings_sha256": "efa8eb7ce4aab39cccb525d5527121c7a962bae9ddf7f71bf47b61b1532a5d09",
+  "source_seizures_sha256": "8073f3f0bee4ac4c7ec5960fc2fe39b68c832e744d12f036ed864c5f2cefb290",
+  "test_policy": "outer patient-level test is evaluated once after validation threshold freeze",
+  "validation_policy": "patient-level GroupShuffleSplit within each outer development set"
+}

@@ -1,0 +1,18 @@
+{
+  "release_id": "meta-ttt-chbmit-5fold-v1",
+  "frozen_at": "2026-09-01T06:33:09.495344+00:00",
+  "preserved_namespaces": [
+    "/root/b_false_alarm_atlas/outputs/reports/neurottt-chbmit-5fold-v1",
+    "/root/b_false_alarm_atlas/outputs/reports/neurottt-chbmit-5fold-v1-bandfix-v3"
+  ],
+  "copied_artifacts": [
+    {
+      "path": "/root/b_false_alarm_atlas/outputs/reports/meta-ttt-chbmit-5fold-v1/freeze/legacy_bandfix_v3_queue_status.json",
+      "sha256": "bdd00ad4942f93696446bece62cc7bf0b080497b813e60edf90a835c47410e38"
+    },
+    {
+      "path": "/root/b_false_alarm_atlas/outputs/reports/meta-ttt-chbmit-5fold-v1/freeze/legacy_bandfix_v3_evaluation_status.json",
+      "sha256": "a62a3f9efe30753ba1512a7d43eeac8fb72f20436d8941bfdfad61efd3482a68"
+    }
+  ]
+}

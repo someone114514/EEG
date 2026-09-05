@@ -1,0 +1,39 @@
+{
+  "folds": [
+    {
+      "fold": 0,
+      "patients": 13,
+      "recordings": 23,
+      "rows": 49839
+    },
+    {
+      "fold": 1,
+      "patients": 13,
+      "recordings": 18,
+      "rows": 49620
+    },
+    {
+      "fold": 2,
+      "patients": 14,
+      "recordings": 19,
+      "rows": 49368
+    },
+    {
+      "fold": 3,
+      "patients": 14,
+      "recordings": 24,
+      "rows": 49791
+    },
+    {
+      "fold": 4,
+      "patients": 14,
+      "recordings": 17,
+      "rows": 49774
+    }
+  ],
+  "max_windows": 50000,
+  "model_outputs_read": false,
+  "release_id": "v3-groupkfold-confirmatory-v1",
+  "subset_id": "outer-train-discovery-subset-v1",
+  "test_read": false
+}

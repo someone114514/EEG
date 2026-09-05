@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: b-false-alarm-atlas
+Version: 0.1.0
+Summary: Leakage-safe false-alarm phenotype atlas for CHB-MIT
+Requires-Python: <3.12,>=3.11
+Requires-Dist: numpy
+Requires-Dist: omegaconf
+Requires-Dist: pydantic>=2
+Requires-Dist: pyyaml
+Requires-Dist: torch
